@@ -1,0 +1,21 @@
+{
+  "name": "knickknacks",
+  "version": "1.0.0",
+  "description": "This application is a platform to provide/avail services within community",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-rajeswarivmarimuthu:levisgaragegroupinc/KnickKnacks.git"
+  },
+  "author": "Travis Bates, Phoenix, Cristobal, Raji",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "sequelize": "^6.20.1"
+  }
+}
