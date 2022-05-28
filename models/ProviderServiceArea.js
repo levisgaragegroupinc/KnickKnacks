@@ -6,7 +6,6 @@ class ProviderServiceArea extends Model {}
 
 ProviderServiceArea.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
