@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KnickKnacks</title>
+  <!-- <link rel="stylesheet" type="text/css" href="/css/jass.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body style="background-image: url(./images/paint-1.jpg)">
+    <header>
+        <nav>
+            <a id="home-button" class="button" href="/"><h1>KnickKnacks</h1></a>
+            <div class="btn-group">
+                <button class="button primary-btn" id="login">Login</button>
+                <button class="button secondary-btn" href="/signup">Signup</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <form>
+                <h3 class="form-title">Sign Up</h3>
+                <div class="form-input signup-form">
+                    <label for='name' class="pad1">Name</label>
+                    <input type="text" id='name' name="name" class="form-field" placeholder="Dobbie">
+                </div>
+                <div class="form-input signup-form">
+                    <label for='email' class="pad1">Email</label>
+                    <input type="text" id='email' name="email" class="form-field" placeholder="delf@hogwarts.edu">
+                </div>
+                <div class="form-input">
+                    <label for="password" class="pad1">Password</label>
+                    <input type="password" id="'password" name="password" class="form-field" placeholder="********">
+                </div>
+                <div class="btn-form-group">
+                    <button type="submit" class="button tertiary-btn">Sign Up</button>
+                    <button href="/login" class="button secondary-btn">Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

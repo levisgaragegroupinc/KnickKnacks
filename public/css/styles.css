@@ -1,5 +1,28 @@
 :root {
 
+--blue-01: #87CEEB;
+--blue-02: #1446A0;
+--blue-03: #3066BE;
+--green-01: #AEB4A9;
+--green-02: #7D7B7D;
+--sand-01: #E0C1B3;
+--grey-01: #7D7B7D;
+--grey-02: #C7C6C7;
+
+/* PRIMARY COLOR GROUP 5 */
+--pink-05-1: #EBA7A7;
+--pink-05-2: #d69898;
+--pink-05-3: #C37D92;
+--grey-05-1: #E2E2E2;
+--grey-05-2: #E2E2E261;
+--grey-05-3: #5A5766;
+--blue-05-1: #87CEEB;
+--blue-05-2: #7fbfd8;
+--purple-05-1: #48435C;
+--green-05-1: #1C7C54;
+--wood-05-1: #F8DFC1AA;
+
+
 }
 
 body {
@@ -9,21 +32,185 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-  }
+    background-color: aqua;
+}
 
-  a {
-      text-decoration: none;
-  }
+header {
+    padding: 10px;
+    background-color: var(--grey-05-2);
+}
 
-  header {
-      padding: 40px;
-      text-align: center;
-  }
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
-  main {
-      display: flex;
-      flex-wrap: wrap;
-      flex-grow: 1;
-  }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-  
+/* BUTTONS */
+
+.button {
+    border-radius: 6px;
+    border: none;
+    padding: 4px 12px;
+    margin: 4px 10px;
+    font-size: 14px;
+    opacity: 1;
+}
+
+.primary-btn {
+    background-color: var(--pink-05-1);
+
+}
+
+.primary-btn:hover {
+    background-color: var(--pink-05-2);
+
+}
+
+.secondary-btn {
+    background-color: var(--blue-05-1);
+}
+
+.secondary-btn:hover {
+    background-color: var(--blue-05-2);
+}
+
+.tertiary-btn {
+    background-color: #fff;
+}
+
+.tertiary-btn:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.icon-btn {
+    border-radius: 50px;
+    padding: 4px 6px;
+    /* background-color: #fff; */
+}
+
+.icon-btn:hover {
+    background-color: var(--pink-05-1)
+}
+
+
+#home-button {
+    margin-left: 20%;
+}
+
+.btn-group {
+    margin-right: 10%;
+    margin-left: 10%;
+    flex-wrap: nowrap;
+}
+
+.btn-form-group {
+    margin: 12px 0px
+}
+
+/* SEARCH BARS */
+
+input:focus {
+    outline: none;
+}
+
+#search-bar {
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    padding: 6px 16px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--wood-05-1);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+}
+
+/* HEADERS AND PARAGRAPHS */
+h1, h2, h3, p {
+    color: #fff;
+    margin: 0; 
+}
+
+h2 {
+    margin: 48px;
+}
+
+h3, p {
+    margin: 4px;
+}
+ 
+.paragraph-container {
+    padding: 12px 12px;
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 40px;
+    width: 100%;
+    margin: 20px;
+}
+
+.form-title {
+    margin-bottom: 32px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;  
+    background-color: var(--wood-05-1);
+    padding: 0px 16px 8px 16px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+
+label {
+    color: #333;
+    margin-bottom: 4px;
+    margin-top: 8px;
+}
+
+.form-field {
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 580px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #home-button {
+        margin-left: 0;
+    }
+
+    .btn-group {
+        margin: 0;
+    }
+
+}
