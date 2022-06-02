@@ -1,4 +1,4 @@
-// fetch function logging in
+// fetch function for logging in
 const loginFormHandler = async (event) => {
   event.preventDefault();
 

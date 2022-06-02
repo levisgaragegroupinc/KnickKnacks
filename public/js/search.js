@@ -2,28 +2,82 @@
 const searchFormHandler = async (event) => {
     event.preventDefault();
   
-    // Collect values from the login form
-    const searchZipCode = document.querySelector('#search-bar').value.trim();
-    const searchSkill = document.querySelector('#dropdown-skill').value.trim();
-  
-    // console.log(email + password)
-  
-    if (searchZipCode) {
-      // Send a POST request to the API endpoint
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        // If successful, redirect the browser to the profile page
-        console.log(response.ok)
-        document.location.replace('/dashboard');
-      } else {
-        alert(response.statusText);
-      }
-    }
+    // Collect values from search bar
+    const searched_zipcode = document.querySelector('#search-bar').value.trim();
+    var searched_skill = document.querySelector('#skill-list-options').value.trim();
+ 
+    // if search button is clicked without selecting a skill or providing a zipcode, do nothing
+    if (searched_skill == "Select skill" && !searched_zipcode) {
+        return
+    };
+
+    // when only searching a skill
+    if (searched_skill !== "Select skill" && !searched_zipcode) {
+        
+        // Send a GET request to the API endpoint
+        let route = `/results/skill/${searched_skill}`;
+            const response = await fetch(route, {
+                method: 'GET',
+                // body: JSON.stringify({ searched_skill, searched_zipcode }),
+                // headers: { 'Content-Type': 'application/json' },
+            });
+        
+            if (response.ok) {
+                // If successful, redirect the browser to the search result page
+                console.log(response.ok)
+                // document.location.replace('/result');
+            } else {
+                alert(response.statusText);
+            }
+    };
+
+    // when only searching a zipcode
+    if (searched_skill == "Select skill" && searched_zipcode) {
+        // verify zipcode is a number and contains 5 digits
+        if (searched_zipcode.length != 5 || isNaN(searched_zipcode) === true) {
+            alert("ZIP code must be five numerical digits long");
+        } else{
+            // Send a GET request to the API endpoint
+            let route = `/results/zipcode/${searched_zipcode}`;
+                const response = await fetch(route, {
+                    method: 'GET',
+                    // body: JSON.stringify({ searched_skill, searched_zipcode }),
+                    // headers: { 'Content-Type': 'application/json' },
+                });
+            
+                if (response.ok) {
+                    // If successful, redirect the browser to the search result page
+                    console.log(response.ok)
+                    // document.location.replace('/result');
+                } else {
+                    alert(response.statusText);
+                }
+        }
+    };
+
+    // when searching a zipcode and skill
+    if (searched_skill !== "Select skill" && searched_zipcode) {
+        // verify zipcode is a number and contains 5 digits
+        if (searched_zipcode.length != 5 || isNaN(searched_zipcode) === true) {
+            alert("ZIP code must be five numerical digits long");
+        } else{
+            // Send a GET request to the API endpoint
+            let route = `/results/zipcode/${searched_zipcode}/skill/${searched_skill}`;
+                const response = await fetch(route, {
+                    method: 'GET',
+                    // body: JSON.stringify({ searched_skill, searched_zipcode }),
+                    // headers: { 'Content-Type': 'application/json' },
+                });
+            
+                if (response.ok) {
+                    // If successful, redirect the browser to the search result page
+                    console.log(response.ok)
+                    // document.location.replace('/result');
+                } else {
+                    alert(response.statusText);
+                }
+        }
+    };
   };
   
   
