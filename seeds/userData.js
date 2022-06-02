@@ -2,13 +2,17 @@ const { User } = require('../models');
 
 const userData = [
     {
-      "name": "Sal",
+      "username": "tacoSal",
+      "first_name": 'Sal',
+      "last_name": 'Taco',
       "email": "sal@hotmail.com",
       "password": "password12345",
       "provider":false
     },
     {
-      "name": "Lernantino",
+      "username": "burritoLer",
+      "first_name":  "Lernantino",
+      "Last_name": "Burrito",
       "email": "lernantino@gmail.com",
       "password": "password12345",
       "provider": true,
@@ -16,7 +20,9 @@ const userData = [
       "total_services_provided": 2
     },
     {
-      "name": "Amiko",
+      "username": "salsaAmiko",
+      "first_name":  "Amiko",
+      "Last_name": "Salsa",
       "email": "amiko2k20@aol.com",
       "password": "password12345",
       "provider": true,
@@ -24,7 +30,9 @@ const userData = [
       "total_services_provided": 4
     },
     {
-      "name": "William",
+      "username": "nachoWill",
+      "first_name":  "William",
+      "Last_name": "Nachos",
       "email": "will.bill@aol.com",
       "password": "greatpass234",
       "provider": true,
