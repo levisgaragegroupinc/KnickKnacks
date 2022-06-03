@@ -43,4 +43,19 @@ router.post("/logout", (req, res) => {
     }
 });
 
+router.post("/sign_up", async (req, res) => {
+    try {
+        const user_data = await User.create(req.body);
+
+        req.session.save(() => {
+            req.session.user_id = user_data.id;
+            req.session.logged_in = true;
+
+            res.status(200).json(user_data);
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 module.exports = router;
