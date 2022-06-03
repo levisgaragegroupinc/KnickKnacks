@@ -4,31 +4,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>KnickKnacks</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body>
-  <header>
-    <h1>KnickKnacks</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <div class="gallery">
-      {{{body}}}
-    </div>
-  </main>
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+<body style="background-image: url(./images/paint-1.jpg)">
+    <header>
+        <nav>
+            <a id="home-button" class="button" href="/"><h1>KnickKnacks</h1></a>
+            <div class="btn-group">
+                {{#if logged_in}}
+                <button class="button tertiary-btn" id="logout">logout</button>
+                <button class="button quad-btn" href="/profile">My Profile</button>
 
+
+                {{else}}
+                <button class="button primary-btn" id="login">Login</button>
+                <button class="button secondary-btn" href="/signup">Signup</button>
+                {{/if}}
+            </div>
+        </nav>
+    </header>
+    <main>
+   {{{ body }}}
+    </main>
+</body>
 </html>
