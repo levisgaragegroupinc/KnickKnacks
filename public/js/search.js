@@ -16,19 +16,16 @@ const searchFormHandler = async (event) => {
         
         // Send a GET request to the API endpoint
         let route = `/results/skill/${searched_skill}`;
-            const response = await fetch(route, {
-                method: 'GET',
-                // body: JSON.stringify({ searched_skill, searched_zipcode }),
-                // headers: { 'Content-Type': 'application/json' },
-            });
-        
-            if (response.ok) {
-                // If successful, redirect the browser to the search result page
-                console.log(response.ok)
-                // document.location.replace('/result');
-            } else {
-                alert(response.statusText);
-            }
+
+        const response = await fetch(route, {
+            method: 'GET',
+        });
+    
+        if (response.ok) {
+            console.log(response.ok)
+        } else {
+            alert(response.statusText);
+        }
     };
 
     // when only searching a zipcode
@@ -36,22 +33,20 @@ const searchFormHandler = async (event) => {
         // verify zipcode is a number and contains 5 digits
         if (searched_zipcode.length != 5 || isNaN(searched_zipcode) === true) {
             alert("ZIP code must be five numerical digits long");
+            return
         } else{
             // Send a GET request to the API endpoint
             let route = `/results/zipcode/${searched_zipcode}`;
-                const response = await fetch(route, {
-                    method: 'GET',
-                    // body: JSON.stringify({ searched_skill, searched_zipcode }),
-                    // headers: { 'Content-Type': 'application/json' },
-                });
-            
-                if (response.ok) {
-                    // If successful, redirect the browser to the search result page
-                    console.log(response.ok)
-                    // document.location.replace('/result');
-                } else {
-                    alert(response.statusText);
-                }
+
+            const response = await fetch(route, {
+                method: 'GET',
+            });
+        
+            if (response.ok) {
+                console.log(response.ok)
+            } else {
+                alert(response.statusText);
+            }
         }
     };
 
@@ -60,22 +55,20 @@ const searchFormHandler = async (event) => {
         // verify zipcode is a number and contains 5 digits
         if (searched_zipcode.length != 5 || isNaN(searched_zipcode) === true) {
             alert("ZIP code must be five numerical digits long");
+            return
         } else{
             // Send a GET request to the API endpoint
-            let route = `/results/zipcode/${searched_zipcode}/skill/${searched_skill}`;
-                const response = await fetch(route, {
-                    method: 'GET',
-                    // body: JSON.stringify({ searched_skill, searched_zipcode }),
-                    // headers: { 'Content-Type': 'application/json' },
-                });
-            
-                if (response.ok) {
-                    // If successful, redirect the browser to the search result page
-                    console.log(response.ok)
-                    // document.location.replace('/result');
-                } else {
-                    alert(response.statusText);
-                }
+            let route = `/results/zip_skill/${searched_zipcode}/${searched_skill}`;
+
+            const response = await fetch(route, {
+                method: 'GET',
+            });
+        
+            if (response.ok) {
+                console.log(response.ok)
+            } else {
+                alert(response.statusText);
+            }
         }
     };
   };
