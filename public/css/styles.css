@@ -20,6 +20,7 @@
 --blue-05-2: #7fbfd8;
 --purple-05-1: #48435C;
 --green-05-1: #1C7C54;
+--green-05-2: #1a6847;
 --wood-05-1: #F8DFC1AA;
 
 
@@ -52,6 +53,7 @@ main {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 32px;
 }
 
 /* BUTTONS */
@@ -91,16 +93,23 @@ main {
     background-color: rgb(228, 228, 228);
 }
 
+.quad-btn {
+    background-color: var(--green-05-1);
+    color: #fff;
+}
+
+.quad-btn:hover {
+    background-color: var(--green-05-2);
+}
+
 .icon-btn {
     border-radius: 50px;
     padding: 4px 6px;
-    /* background-color: #fff; */
 }
 
 .icon-btn:hover {
     background-color: var(--pink-05-1)
 }
-
 
 #home-button {
     margin-left: 20%;
@@ -123,7 +132,8 @@ input:focus {
 }
 
 #search-bar {
-    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     border: none;
     font-size: 16px;
     padding: 6px 16px;
@@ -131,10 +141,45 @@ input:focus {
 
 .search-container {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     background-color: var(--wood-05-1);
     padding: 4px 12px;
     border-radius: 20px;
+}
+
+.search-bar-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.search-results-search-bar {
+    margin: 32px;
+}
+
+
+/* DROP DOWNS */
+select {
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 16px;
+    padding: 6px 6px;
+    line-height: 3;
+}
+
+select:focus {
+    outline: none;
+}
+
+.drop-down {
+    position: relative;
+    width: fit-content;
 }
 
 /* LINKS */
@@ -155,9 +200,14 @@ h2 {
 h3, p {
     margin: 4px;
 }
+
+h4 {
+    margin: 0;
+    color: #333;
+}
  
 .paragraph-container {
-    padding: 12px 12px;
+    margin: 12px 20%;
 }
 
 /* FORMS */
@@ -183,6 +233,7 @@ form {
 }
 
 label {
+    font-weight: 700;
     color: #333;
     margin-bottom: 4px;
     margin-top: 8px;
@@ -193,6 +244,48 @@ label {
     border: none;
     font-size: 16px;
     padding: 4px 8px;
+}
+
+/* BIO ARTICLES */
+.provider-container {
+    margin: 12px 10%;
+    padding: 12px 12px;
+    background-color: #7fbfd8;
+    border-radius: 6px;
+}
+
+.bio-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    color: #fff;
+    background-color: #3066BE;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin: 4px 10px;
+    font-size: 14px;
+}
+
+.bio {
+    padding: 6px 0px;
+    color: #333;
+}
+
+.bio-content {
+   padding-right: 32px;
+}
+
+/* PROFILE ITEMS */
+
+.profile-item {
+    width: 50%;
 }
 
 

@@ -7,6 +7,7 @@
   <title>KnickKnacks</title>
   <!-- <link rel="stylesheet" type="text/css" href="/css/jass.css"> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" /> -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
@@ -24,30 +25,26 @@
     </header>
     <main>
         <div>
-            <form class="signup-form">
-                <h3 class="form-title">Sign Up</h3>
-                <div class="form-input">
-                    <label for='name' class="">Name</label>
-                    <input type="text" id='name' name="name" class="form-field" placeholder="Dobbie">
-                </div>
-                <div class="form-input signup-form">
-                    <label for='email' class="">Email</label>
-                    <input type="text" id='email' name="email" class="form-field" placeholder="delf@hogwarts.edu">
-                </div>
-                <div class="form-input">
-                    <label for="password" class="">Password</label>
-                    <input type="password" id="'password" name="password" class="form-field" placeholder="********">
-                </div>
-                <div class="btn-form-group">
-                    <button type="submit" class="button tertiary-btn">Sign Up</button>
-                    <button href="/login" class="button secondary-btn">Login</button>
-                </div>
+            <form>
+                <h3 class="form-title">Skills</h3>
                 <div class="" id="drop-down">
                         <label for='skill' class="">Select Skill
-                        <select id="skill-source-options">
+                        <select name="skills" id="skill-list-options" multipe>
                         <option selected>Select Skill</option>
+                        <option value="paint">painting</option>
+                        <option value="mechanic">auto mechanic</option>
+                        <option value="gardening">gardening</option>
                         </select>
                     </label>
+                </div>
+                <h3 class="form-title">Skills Checkbox</h3>
+                <div class="" id="drop-down">
+                    <label for="skill1">paiting</label>
+                    <input type="checkbox" id="skill1" name="skill1" value="painting">
+                    <label for="skill1">auto mechanic</label>
+                    <input type="checkbox" id="skill2" name="skill2" value="auto_mechanic">
+                    <label for="skill1">gardening</label>
+                    <input type="checkbox" id="skill3" name="skill3" value="gardening">
                 </div>
             </form>
         </div>

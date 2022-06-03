@@ -7,6 +7,7 @@
   <title>KnickKnacks</title>
   <!-- <link rel="stylesheet" type="text/css" href="/css/jass.css"> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" /> -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
@@ -40,9 +41,23 @@
             </p>
         </div>
         <div class="search-container search-form">
+            <div class="search-bar-container">
             <input id="search-bar" type="text" placeholder="Search by zip code...">
+            <div class="drop-down">
+                <label for='skill' class="">
+                <select name="skills" id="skill-list-options" multipe>
+                <option selected>Select skill</option>
+                <option value="paint">painting</option>
+                <option value="mechanic">auto mechanic</option>
+                <option value="gardening">gardening</option>
+                </select>
+            </label>
+            </div>
+            </div>
             <span uk-icon="icon: search" class="button icon-btn" id="search-submit-btn"></span>
         </div>
+        
+
     </main>
 </body>
 
