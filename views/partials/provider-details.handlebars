@@ -1,0 +1,17 @@
+<div class="provider-container">
+    <div>
+        <div class="bio-header">
+            <h4>{{ username }}</h4>
+            <button class="button quad-btn" href="/request-services/{{id}}">Request services</button>
+        </div>
+        <div class="bio-content">
+            <h4>Bio:</h4>
+            <p class="bio">{{ user_bio }}</p>
+        </div>
+    </div>
+    <div class="skills-list">
+        {{#each skill as |skill|}}
+        {{>skill-details skill}}
+        {{/each}}
+    </div>
+</div>
