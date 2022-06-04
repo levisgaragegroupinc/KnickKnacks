@@ -13,11 +13,16 @@
 --pink-05-1: #EBA7A7;
 --pink-05-2: #d69898;
 --pink-05-3: #C37D92;
+--black-05-1: #333;
+--black-05-2:  rgba(51, 51, 51, 0.863);
+--white-05-1: #ffffffdd; 
 --grey-05-1: #E2E2E2;
 --grey-05-2: #E2E2E261;
 --grey-05-3: #5A5766;
 --blue-05-1: #87CEEB;
 --blue-05-2: #7fbfd8;
+--blue-05-3: #478eb4e5;
+
 --purple-05-1: #48435C;
 --green-05-1: #1C7C54;
 --green-05-2: #1a6847;
@@ -57,6 +62,34 @@ main {
     margin-bottom: 32px;
 }
 
+/* LINKS */
+a {
+    text-decoration: none;
+}
+
+/* HEADERS AND PARAGRAPHS */
+h1, h2, h3, p {
+    color: #fff;
+    margin: 0; 
+}
+
+h2 {
+    margin: 48px;
+}
+
+h3, p {
+    margin: 4px;
+}
+
+h4 {
+    margin: 0;
+    color: #333;
+}
+ 
+.paragraph-container {
+    margin: 12px 20%;
+}
+
 /* BUTTONS */
 
 .button {
@@ -65,7 +98,7 @@ main {
     padding: 4px 12px;
     margin: 4px 10px;
     font-size: 14px;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .primary-btn {
@@ -101,6 +134,15 @@ main {
 
 .quad-btn:hover {
     background-color: var(--green-05-2);
+}
+
+.alt-btn {
+    color: #fff;
+    background-color: var(--black-05-2);
+}
+
+.alt-btn:hover {
+    background-color: var(--green-05-1);
 }
 
 #home-button {
@@ -196,34 +238,6 @@ select:focus {
     width: fit-content;
 }
 
-/* LINKS */
-a {
-    text-decoration: none;
-}
-
-/* HEADERS AND PARAGRAPHS */
-h1, h2, h3, p {
-    color: #fff;
-    margin: 0; 
-}
-
-h2 {
-    margin: 48px;
-}
-
-h3, p {
-    margin: 4px;
-}
-
-h4 {
-    margin: 0;
-    color: #333;
-}
- 
-.paragraph-container {
-    margin: 12px 20%;
-}
-
 /* FORMS */
 form {
     display: flex;
@@ -240,7 +254,7 @@ form {
 .form-input {
     display: flex;
     flex-direction: column;  
-    background-color: var(--wood-05-1);
+    background-color: var(--white-05-1);
     padding: 0px 16px 8px 16px;
     border-radius: 40px;
     margin-bottom: 10px;
@@ -260,6 +274,13 @@ label {
     padding: 4px 8px;
 }
 
+.form-container {
+    border: solid 2px #fff;
+    border-radius: 25px;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.863);
+}
+
 /* BIO ARTICLES */
 .bio-container {
     display: flex;
@@ -275,7 +296,7 @@ label {
 .provider-container {
     margin: 12px 10%;
     padding: 12px 12px;
-    background-color: #7fbfd8;
+    background-color: var(--white-05-1);
     border-radius: 6px;
 }
 
@@ -299,15 +320,6 @@ label {
     padding-top: 10px;
 }
 
-.skill {
-    color: #fff;
-    background-color: #3066BE;
-    border-radius: 20px;
-    padding: 4px 12px;
-    margin: 4px 10px;
-    font-size: 14px;
-}
-
 .skills-item {
     color: #333;
     background-color: var(--yellow-05-1);
@@ -316,7 +328,6 @@ label {
     margin: 4px 8px 4px 0px;
     font-size: 14px;
 }
-
 
 
 /* PROFILE ITEMS */
@@ -337,13 +348,6 @@ label {
     border-radius: 20px;
     font-size: 28px;
     background-color: var(--green-05-3);
-}
-
-.profile-container {
-    margin: 5px 10px;
-    padding: 12px 12px;
-    background-color: #7fbfd8;
-    border-radius: 6px;
 }
 
 .profile-container-white {
@@ -370,6 +374,11 @@ label {
 
 .request-counter {
     font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
     text-align: center;
     height: 50px;
     width: 50px;
