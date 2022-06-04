@@ -43,7 +43,10 @@
         </div>
     <div class="bio-container">
         <div>
-            <button uk-icon="icon: pencil" class="button edit-icon-btn" href="/edit"></button>
+            <button uk-icon="icon: check" class="button edit-icon-btn" id="save-bio-btn"></button>
+        </div>
+        <div>
+            <button uk-icon="icon: close" class="button edit-icon-btn" href="/profile"></button>
         </div>
         <div>
             <div class="profile-container-white">
@@ -52,7 +55,12 @@
                         <h4>Bio</h4>
                     </div>
                     <div class="bio-content">
-                        <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut.</p>
+                        <textarea class="bio" id="bio-text" name="bio-text" rows="4rows" cols="100">
+
+
+                        </textarea>
+
+                        <p class="bio">Lorem ipsum dolor sit amet, lorem mollis aliquam ut.</p>
                     </div>
                 </div>
             </div>

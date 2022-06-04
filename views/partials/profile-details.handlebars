@@ -1,0 +1,29 @@
+<div class="bio-container">
+    <div>
+        <button uk-icon="icon: pencil" class="button edit-icon-btn" href="/edit"></button>
+    </div>
+    <div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Bio</h4>
+                </div>
+                <div class="bio-content">
+                    <p class="bio">{{ user_bio }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Skills</h4>
+                </div>
+            </div>
+            <div class="skills-list">
+               {{#each skills as |skill|}}
+               {{>skill-details skill}}
+               {{/each}}
+            </div>
+        </div>
+    </div>
+</div> 
