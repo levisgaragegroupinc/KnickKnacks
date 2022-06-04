@@ -1,0 +1,43 @@
+<div class="welcome-container">
+    <div class="profile-welcome">
+        <div>
+            <h3>Welcome:</h3>
+        </div>
+        <div>
+            <h3 class="nowrap" >{{ first_name }} {{ last_name }}</h3>
+        </div>
+    </div>
+    <div class="request-counter-container">
+        <h3 class="nowrap">Request Counter</h3>
+        <h1 class="request-counter">{{ request_#number }}</h1>
+    </div>
+</div>
+<div class="bio-container">
+    <div>
+        <button uk-icon="icon: pencil" class="button edit-icon-btn" href="/edit"></button>
+    </div>
+    <div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Bio</h4>
+                </div>
+                <div class="bio-content">
+                    <p class="bio">{{ user_bio }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Skills</h4>
+                </div>
+            </div>
+            <div class="skills-list">
+               {{#each skills as |skill|}}
+               {{>skill-details skill}}
+               {{/each}}
+            </div>
+        </div>
+    </div>
+</div> 
