@@ -16,11 +16,14 @@
   "author": "Travis Bates, Phoenix, Cristobal, Raji",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
-    "sequelize": "^6.20.1"
+    "sequelize": "^6.20.1",
+    "superagent": "^7.1.6"
   }
 }
