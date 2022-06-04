@@ -13,8 +13,9 @@
 --pink-05-1: #EBA7A7;
 --pink-05-2: #d69898;
 --pink-05-3: #C37D92;
---black-05-01: #333;
---white-05-01: #ffffffdd; 
+--black-05-1: #333;
+--black-05-2:  rgba(51, 51, 51, 0.863);
+--white-05-1: #ffffffdd; 
 --grey-05-1: #E2E2E2;
 --grey-05-2: #E2E2E261;
 --grey-05-3: #5A5766;
@@ -97,7 +98,7 @@ h4 {
     padding: 4px 12px;
     margin: 4px 10px;
     font-size: 14px;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .primary-btn {
@@ -133,6 +134,15 @@ h4 {
 
 .quad-btn:hover {
     background-color: var(--green-05-2);
+}
+
+.alt-btn {
+    color: #fff;
+    background-color: var(--black-05-2);
+}
+
+.alt-btn:hover {
+    background-color: var(--green-05-1);
 }
 
 #home-button {
@@ -244,7 +254,7 @@ form {
 .form-input {
     display: flex;
     flex-direction: column;  
-    background-color: var(--wood-05-1);
+    background-color: var(--white-05-1);
     padding: 0px 16px 8px 16px;
     border-radius: 40px;
     margin-bottom: 10px;
@@ -264,6 +274,13 @@ label {
     padding: 4px 8px;
 }
 
+.form-container {
+    border: solid 2px #fff;
+    border-radius: 25px;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.863);
+}
+
 /* BIO ARTICLES */
 .bio-container {
     display: flex;
@@ -279,7 +296,7 @@ label {
 .provider-container {
     margin: 12px 10%;
     padding: 12px 12px;
-    background-color: var(--white-05-01);
+    background-color: var(--white-05-1);
     border-radius: 6px;
 }
 
@@ -303,15 +320,6 @@ label {
     padding-top: 10px;
 }
 
-.skill {
-    color: #fff;
-    background-color: #3066BE;
-    border-radius: 20px;
-    padding: 4px 12px;
-    margin: 4px 10px;
-    font-size: 14px;
-}
-
 .skills-item {
     color: #333;
     background-color: var(--yellow-05-1);
@@ -320,7 +328,6 @@ label {
     margin: 4px 8px 4px 0px;
     font-size: 14px;
 }
-
 
 
 /* PROFILE ITEMS */
@@ -342,13 +349,6 @@ label {
     font-size: 28px;
     background-color: var(--green-05-3);
 }
-
-/* .profile-container {
-    margin: 5px 10px;
-    padding: 12px 12px;
-    background-color: #7fbfd8;
-    border-radius: 6px;
-} */
 
 .profile-container-white {
     color: #333;
