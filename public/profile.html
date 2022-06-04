@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KnickKnacks</title>
-  <!-- <link rel="stylesheet" type="text/css" href="/css/jass.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" /> -->
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
-</head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KnickKnacks</title>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+      </head>
+
 
 <body style="background-image: url(./images/paint-1.jpg)">
     <header>
@@ -23,49 +26,48 @@
         </nav>
     </header>
     <main>
-        <div>
-            <h3>Welcome:</h3>
-        </div>
-        <div>
-            <h3>Raji</h3>
-        </div>
 
-    <div class="provider-container profile-item">
+        <div class="welcome-container">
+            <div class="profile-welcome">
+                <div>
+                    <h3>Welcome:</h3>
+                </div>
+                <div>
+                    <h3 class="nowrap" >Raji Marmuthu</h3>
+                </div>
+            </div>
+            <div class="request-counter-container">
+                <h3 class="nowrap">Request Counter</h3>
+                <h1 class="request-counter">1</h1>
+            </div>
+        </div>
+    <div class="bio-container">
         <div>
-            <div class="bio-header">
-                <h4>Bio</h4>
-                <button class="button quad-btn" href="/edit">Edit</button>
-            </div>
-            <div class="bio-content">
-                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut.</p>
-            </div>
+            <button uk-icon="icon: pencil" class="button edit-icon-btn" href="/edit"></button>
         </div>
-        <div class="skills-list">
-            <div class="skill">plumbing</div>
-            <div class="skill">electrical</div>
-        </div>
-    </div>
-    <div class="provider-container profile-item">
         <div>
-            <div class="bio-header">
-                <h4>Requests</h4>
-                <button class="button quad-btn" href="/edit">Edit</button>
+            <div class="profile-container-white">
+                <div>
+                    <div class="bio-header">
+                        <h4>Bio</h4>
+                    </div>
+                    <div class="bio-content">
+                        <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="skills-list">
-            <div class="skill">No requests</div>
-        </div>
-    </div>  
-    <div class="provider-container profile-item">
-        <div>
-            <div class="bio-header">
-                <h4>Skills</h4>
-                <button class="button quad-btn" href="/edit">Edit</button>
+            <div class="profile-container-white">
+                <div>
+                    <div class="bio-header">
+                        <h4>Skills</h4>
+                    </div>
+                </div>
+                <div class="skills-list">
+                    <div class="skills-item">plumbing</div>
+                    <div class="skills-item">electrical</div>
+                </div>
             </div>
-        </div>
-        <div class="skills-list">
-            <div class="skill">plumbing</div>
-            <div class="skill">electrical</div>
+
         </div>
     </div>       
     </main>
