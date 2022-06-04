@@ -23,22 +23,26 @@
         </nav>
     </header>
     <main>
-        <div>
-            <h3>Welcome:</h3>
-        </div>
-        <div>
-            <h3>Raji</h3>
-        </div>
-        <div class="request-counter-container">
-            <h3>Request Counter</h3>
-            <h1 class="request-counter">1</h1>
+        <div class="welcome-container">
+            <div class="profile-welcome">
+                <div>
+                    <h3>Welcome:</h3>
+                </div>
+                <div>
+                    <h3 class="nowrap" >Raji Marmuthu</h3>
+                </div>
+            </div>
+            <div class="request-counter-container">
+                <h3 class="nowrap">Request Counter</h3>
+                <h1 class="request-counter">1</h1>
+            </div>
         </div>
     <div class="bio-container">
         <div>
-            <button class="button quad-btn" href="/edit">Edit</button>
+            <button uk-icon="icon: pencil" class="button edit-icon-btn" href="/edit"></button>
         </div>
         <div>
-            <div class="profile-container profile-item">
+            <div class="profile-container-white">
                 <div>
                     <div class="bio-header">
                         <h4>Bio</h4>
@@ -48,19 +52,18 @@
                     </div>
                 </div>
             </div>
-            <div class="profile-container profile-item">
+            <div class="profile-container-white">
                 <div>
                     <div class="bio-header">
                         <h4>Skills</h4>
                     </div>
                 </div>
                 <div class="skills-list">
-                    <div class="skill">plumbing</div>
-                    <div class="skill">electrical</div>
+                    <div class="skills-item">plumbing</div>
+                    <div class="skills-item">electrical</div>
                 </div>
             </div>
         </div>
-
     </div>       
     </main>
 </body>
