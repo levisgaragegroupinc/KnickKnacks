@@ -3,8 +3,8 @@ const searchFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from search bar
-    const searched_zipcode = document.querySelector('#search-bar').value.trim();
-    var searched_skill = document.querySelector('#skill-list-options').value.trim();
+    const searched_zipcode = document.querySelector("#search-bar").value.trim();
+    var searched_skill = document.querySelector("#skill-list-options").value.trim();
  
     // if search button is clicked without selecting a skill or providing a zipcode, do nothing
     if (searched_skill == "Select skill" && !searched_zipcode) {
@@ -18,7 +18,7 @@ const searchFormHandler = async (event) => {
         let route = `/results/skill/${searched_skill}`;
 
         const response = await fetch(route, {
-            method: 'GET',
+            method: "GET",
         });
     
         if (response.ok) {
@@ -39,7 +39,7 @@ const searchFormHandler = async (event) => {
             let route = `/results/zipcode/${searched_zipcode}`;
 
             const response = await fetch(route, {
-                method: 'GET',
+                method: "GET",
             });
         
             if (response.ok) {
@@ -61,7 +61,7 @@ const searchFormHandler = async (event) => {
             let route = `/results/zip_skill/${searched_zipcode}/${searched_skill}`;
 
             const response = await fetch(route, {
-                method: 'GET',
+                method: "GET",
             });
         
             if (response.ok) {
@@ -75,6 +75,6 @@ const searchFormHandler = async (event) => {
   
   
   document
-    .querySelector('#search-submit-btn')
-    .addEventListener('click', searchFormHandler);
+    .querySelector("#search-submit-btn")
+    .addEventListener("click", searchFormHandler);
   
