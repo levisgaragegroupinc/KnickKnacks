@@ -1,0 +1,20 @@
+<div class="welcome-container">
+    <div class="profile-welcome">
+        <div>
+            <h3>Welcome:</h3>
+        </div>
+        <div>
+            <h3 class="nowrap" >{{ first_name }} {{ last_name }}</h3>
+        </div>
+    </div>
+    <div class="request-counter-container">
+        <h3 class="nowrap">Request Counter</h3>
+        <h1 class="request-counter">{{ request_#number }}</h1>
+    </div>
+</div>
+{{#if editing }}
+{{>edit-profile-details }}
+{{else}}
+{{>profile-details}}
+{{/if}}
+
