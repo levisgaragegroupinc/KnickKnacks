@@ -26,7 +26,9 @@
 --purple-05-1: #48435C;
 --green-05-1: #1C7C54;
 --green-05-2: #1a6847;
+
 --green-05-3: #1a6848d0;
+
 --wood-05-1: #F8DFC1AA;
 --yellow-05-1: #FEB300;
 
@@ -60,6 +62,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 32px;
+
 }
 
 /* LINKS */
@@ -88,6 +91,7 @@ h4 {
  
 .paragraph-container {
     margin: 12px 20%;
+
 }
 
 /* BUTTONS */
@@ -134,6 +138,7 @@ h4 {
 
 .quad-btn:hover {
     background-color: var(--green-05-2);
+
 }
 
 .alt-btn {
@@ -141,9 +146,11 @@ h4 {
     background-color: var(--black-05-2);
 }
 
+
 .alt-btn:hover {
     background-color: var(--green-05-1);
 }
+
 
 #home-button {
     font-family: 'Press Start 2P', cursive;
@@ -208,6 +215,7 @@ input:focus {
     display: flex;
     background-color: #fff;
     border-radius: 50px;
+
 }
 
 .search-results-search-bar {
@@ -233,9 +241,11 @@ select:focus {
     outline: none;
 }
 
+
 .drop-down {
     position: relative;
     width: fit-content;
+
 }
 
 /* FORMS */
@@ -274,6 +284,7 @@ label {
     padding: 4px 8px;
 }
 
+
 .form-container {
     border: solid 2px #fff;
     border-radius: 25px;
@@ -297,6 +308,7 @@ label {
     margin: 12px 10%;
     padding: 12px 12px;
     background-color: var(--white-05-1);
+
     border-radius: 6px;
 }
 
@@ -304,6 +316,7 @@ label {
     display: flex;
     justify-content: space-between;
 }
+
 
 .bio {
     padding: 6px 0px;
