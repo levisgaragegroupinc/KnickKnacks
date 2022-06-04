@@ -5,7 +5,7 @@ const withAuth = require("../utils/withAuth");
 
 //Setting up router for rendering homepage
 router.get("/", (req, res) => {
-    res.render("homepage", {
+    res.render("home", {
         logged_in: req.session.logged_in
     });
 });
@@ -104,7 +104,7 @@ router.get("/:username", withAuth, async (req,res)=> {
         }
     });
     
-    res.render("userprofile", { 
+    res.render("profile", { 
         user,
         logged_in: req.session.logged_in
     });
