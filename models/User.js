@@ -20,7 +20,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      autoIncrement: true,
       allowNull: false,
       validate: {
         len: [8],
