@@ -36,7 +36,7 @@ const searchFormHandler = async (event) => {
             return
         } else{
             // Send a GET request to the API endpoint
-            let route = `/results/zipcode/${searched_zipcode}`;
+            let route = `/results/zip/${searched_zipcode}`;
 
             const response = await fetch(route, {
                 method: "GET",
