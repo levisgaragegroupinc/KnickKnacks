@@ -111,4 +111,14 @@ router.get("/:username", withAuth, async (req,res)=> {
 
 });
 
+// Renders the form to request services from [username]
+router.get("/request/:username", async (req, res) => {
+    const provider = await User.findOne({ where: { username: req.params.username } });
+
+    res.render("request-service-form", {
+        logged_in: req.session.logged_in,
+        bio: provider.provider_bio
+    });
+});
+
 module.exports = router;
