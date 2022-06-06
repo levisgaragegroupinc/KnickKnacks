@@ -42,11 +42,13 @@
             </div>
         </div>
     <div class="bio-container">
-        <div>
-            <button uk-icon="icon: check" class="button edit-icon-btn" id="save-bio-btn"></button>
-        </div>
-        <div>
-            <button uk-icon="icon: close" class="button edit-icon-btn" href="/profile"></button>
+        <div class="edit-skills-btn-group">
+            <div>
+                <button class="button tertiary-btn" href="/profile">cancel</button>
+            </div>
+            <div>
+                <button class="button tertiary-btn" id="save-bio-btn">save</button>
+            </div>
         </div>
         <div>
             <div class="profile-container-white">
@@ -55,12 +57,7 @@
                         <h4>Bio</h4>
                     </div>
                     <div class="bio-content">
-                        <textarea class="bio" id="bio-text" name="bio-text" rows="4rows" cols="100">
-
-
-                        </textarea>
-
-                        <p class="bio">Lorem ipsum dolor sit amet, lorem mollis aliquam ut.</p>
+                        <textarea class="bio" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
                     </div>
                 </div>
             </div>
@@ -68,14 +65,30 @@
                 <div>
                     <div class="bio-header">
                         <h4>Skills</h4>
+                        <h4>border = selected!</h4>
                     </div>
                 </div>
-                <div class="skills-list">
-                    <div class="skills-item">plumbing</div>
-                    <div class="skills-item">electrical</div>
-                </div>
+                <form class="edit-skills-form">
+                    <div class="skills-options-list" id="checkbox">
+                        <label for="skill1" class="checkbox-container">painting
+                            <input type="checkbox" id="skill1" name="skill1" value="painting">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="skill2" class="checkbox-container">canning
+                            <input type="checkbox" id="skill2" name="skill2" value="canning">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="skill3" class="checkbox-container">plumbing
+                            <input type="checkbox" id="skill3" name="skill3" value="plumbing">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="skill4" class="checkbox-container">electrical
+                            <input type="checkbox" id="skill4" name="skill4" value="electrical">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </form>
             </div>
-
         </div>
     </div>       
     </main>

@@ -5,7 +5,7 @@ const withAuth = require("../utils/withAuth");
 
 //Setting up router for rendering homepage
 router.get("/", (req, res) => {
-    res.render("homepage", {
+    res.render("home", {
         logged_in: req.session.logged_in
     });
 });
@@ -104,11 +104,21 @@ router.get("/:username", withAuth, async (req,res)=> {
         }
     });
     
-    res.render("userprofile", { 
+    res.render("profile", { 
         user,
         logged_in: req.session.logged_in
     });
 
+});
+
+// Renders the form to request services from [username]
+router.get("/request/:username", async (req, res) => {
+    const provider = await User.findOne({ where: { username: req.params.username } });
+
+    res.render("request-service-form", {
+        logged_in: req.session.logged_in,
+        bio: provider.provider_bio
+    });
 });
 
 module.exports = router;

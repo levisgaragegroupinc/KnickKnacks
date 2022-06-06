@@ -1,0 +1,37 @@
+<div class="bio-container">
+    <div class="edit-skills-btn-group">
+        <div>
+            <button class="button tertiary-btn" href="/profile">cancel</button>
+        </div>
+        <div>
+            <button class="button tertiary-btn" id="save-bio-btn">save</button>
+        </div>
+    </div>
+    <div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Bio</h4>
+                </div>
+                <div class="bio-content">
+                    <textarea type="text" value={{bio_text}} class="bio" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Skills</h4>
+                    <h4>border = selected!</h4>
+                </div>
+            </div>
+            <form class="edit-skills-form">
+                <div class="skills-options-list" id="checkbox">
+                    {{#each skills_option as |skill_option|}}
+                    {{>skill-option-details skill_option}}
+                    {{/each}}
+                </div>
+            </form>
+        </div>
+    </div> 
+</div>      
