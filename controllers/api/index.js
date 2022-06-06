@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const service_routes = require("./service-route");
+const service_routes = require("./service-routes");
 
 const session_routes = require("./session-routes");
 const skill_routes = require("./skill-routes");
