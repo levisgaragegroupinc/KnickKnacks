@@ -51,6 +51,7 @@ User.init(
     provider: {
       type: DataTypes.BOOLEAN,
       allowNull:false,
+      defaultValue: false,
     },
     provider_bio: {
       type: DataTypes.TEXT,
