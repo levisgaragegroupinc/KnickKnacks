@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require("path");
 const express = require("express");
 const session = require("express-session");
-const exphbs = require('express-handlebars');
+const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 const routes = require("./controllers");
 // import sequelize connection
@@ -13,12 +13,12 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: "Super secret secret",
   logged_in: false,
   cookie: {
     maxAge: 3600000,
     httpOnly: true,
-    sameSite: 'strict'
+    sameSite: "strict"
   },
   resave: false,
   saveUninitialized: true,
