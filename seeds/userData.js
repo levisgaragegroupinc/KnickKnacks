@@ -12,7 +12,7 @@ const userData = [
     {
       "username": "burritoLer",
       "first_name":  "Lernantino",
-      "Last_name": "Burrito",
+      "last_name": "Burrito",
       "email": "lernantino@gmail.com",
       "password": "password12345",
       "provider": true,
@@ -22,7 +22,7 @@ const userData = [
     {
       "username": "salsaAmiko",
       "first_name":  "Amiko",
-      "Last_name": "Salsa",
+      "last_name": "Salsa",
       "email": "amiko2k20@aol.com",
       "password": "password12345",
       "provider": true,
@@ -32,7 +32,7 @@ const userData = [
     {
       "username": "nachoWill",
       "first_name":  "William",
-      "Last_name": "Nachos",
+      "last_name": "Nachos",
       "email": "will.bill@aol.com",
       "password": "greatpass234",
       "provider": true,
