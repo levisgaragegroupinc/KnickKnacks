@@ -38,7 +38,6 @@ router.get("/favicon.ico", (req, res) => {
 
 //Setting up router for search results 
 router.get("/:username", withAuth, async (req, res)=> {
-    console.log("Req params:",req.params);
     const user_data = await User.findOne({
         where: {
             username: req.params.username
@@ -49,7 +48,6 @@ router.get("/:username", withAuth, async (req, res)=> {
         }
     });
     const user = user_data.get({ plain: true });
-    console.log("User:",user);
     
     res.render("home-profile", { 
         user,
