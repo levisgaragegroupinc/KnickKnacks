@@ -16,8 +16,6 @@
   "author": "Travis Bates, Phoenix, Cristobal, Raji",
   "license": "ISC",
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.75",
-    "@mailchimp/mailchimp_transactional": "^1.0.47",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
@@ -27,7 +25,6 @@
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
-    "sequelize": "^6.20.1",
-    "superagent": "^7.1.6"
+    "sequelize": "^6.20.1"
   }
 }
