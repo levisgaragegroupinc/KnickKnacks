@@ -6,14 +6,17 @@ const withAuth = require("../utils/withAuth");
 //Setting up router for search results 
 router.get("/skill/:skill", withAuth, async (req,res) => {
     const providers_data = await User.findAll({
-        attributes: {
-            include: [
-              [{ model: Skill, through: ProviderSkill, as: "skill" }, { model: ServiceArea }]
-            ],
-            where: {
-                skill: req.params.skill
+        include: [
+            {
+                model: Skill,
+                as: "providers_skills",
+                where: { skill_name: req.params.skill }
+            },
+            {
+                model: ServiceArea,
+                as: "areas_served"
             }
-        }
+        ]
     });
 
     const providers = providers_data.map(provider => provider.get({ plain: true }));
@@ -26,14 +29,15 @@ router.get("/skill/:skill", withAuth, async (req,res) => {
 
 router.get("/zip/:zipcode", withAuth, async (req,res) => {
     const providers_data = await User.findAll({
-        attributes: {
-            include: [
-              [{ model: Skill, through: ProviderSkill, as: "skill" }, { model: ServiceArea, as: "area" }]
-            ],
-            where: {
-                area: req.params.zipcode
+        include: [
+            { model: Skill, as: "providers_skills" },
+            {
+                model: ServiceArea,
+                as: "areas_served",
+                where: { zipcode: req.params.zipcode }
             }
-        }
+        ]
+        
     });
 
     const providers = providers_data.map(provider => provider.get({ plain: true }));
@@ -46,15 +50,18 @@ router.get("/zip/:zipcode", withAuth, async (req,res) => {
 
 router.get("/zip_skill/:zipcode/:skill", withAuth, async (req,res) => {
     const providers_data = await User.findAll({
-        attributes: {
-            include: [
-              [{ model: Skill, through: ProviderSkill, as: "skill" }, { model: ServiceArea }]
-            ],
-            where: {
-                skill: req.params.skill,
-                area: req.params.zipcode
+        include: [
+            {
+                model: Skill,
+                as: "providers_skills",
+                where: { skill_name: req.params.skill }
+            },
+            {
+                model: ServiceArea,
+                as: "areas_served",
+                where: { zipcode: req.params.zipcode }
             }
-        }
+        ]
     });
 
     const providers = providers_data.map(provider => provider.get({ plain: true }));
