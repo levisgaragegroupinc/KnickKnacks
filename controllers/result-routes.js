@@ -8,7 +8,7 @@ router.get("/skill/:skill", withAuth, async (req,res) => {
     const providers_data = await User.findAll({
         attributes: {
             include: [
-              [{ model: Skill }, { model: ServiceArea }]
+              [{ model: Skill, through: ProviderSkill, as: "skill" }, { model: ServiceArea }]
             ],
             where: {
                 skill: req.params.skill
@@ -28,7 +28,7 @@ router.get("/zip/:zipcode", withAuth, async (req,res) => {
     const providers_data = await User.findAll({
         attributes: {
             include: [
-              [{ model: Skill, as: "skill" }, { model: ServiceArea, as: "area" }]
+              [{ model: Skill, through: ProviderSkill, as: "skill" }, { model: ServiceArea, as: "area" }]
             ],
             where: {
                 area: req.params.zipcode
@@ -48,7 +48,7 @@ router.get("/zip_skill/:zipcode/:skill", withAuth, async (req,res) => {
     const providers_data = await User.findAll({
         attributes: {
             include: [
-              [{ model: Skill }, { model: ServiceArea }]
+              [{ model: Skill, through: ProviderSkill, as: "skill" }, { model: ServiceArea }]
             ],
             where: {
                 skill: req.params.skill,
