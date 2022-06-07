@@ -14,7 +14,7 @@
                     <h4>Bio</h4>
                 </div>
                 <div class="bio-content">
-                    <textarea type="text" value={{bio_text}} class="bio" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
+                    <textarea type="text" value={{provider_bio}} class="bio" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
             </div>
             <form class="edit-skills-form">
                 <div class="skills-options-list" id="checkbox">
-                    {{#each skills_option as |skill_option|}}
+                    {{#each skill_name as |skill_option|}}
                     {{>skill-option-details skill_option}}
                     {{/each}}
                 </div>

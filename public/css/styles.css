@@ -79,6 +79,7 @@ textarea {
 /* LINKS */
 a {
     text-decoration: none;
+    color: #333;
 }
 
 /* HEADERS AND PARAGRAPHS */
@@ -101,13 +102,58 @@ h4 {
 }
  
 .paragraph-container {
-    margin: 12px 20%;
-
+    text-align: center;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 6px;
 }
 
 .grn-font {
     color: var(--green-05-4)
 }
+
+/* HERO ITEMS */
+.hero-statement {
+    color: #fff;
+    background-color: var(--green-05-3);
+    padding: 6px 12px; 
+    border-radius: 10px;  
+    text-align: center;
+    min-width: 300px;
+}
+
+.hero-statement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px #fff;
+    border-radius: 25px;
+    padding: 6px;
+    max-width: 300px;
+    min-width: 300px;
+    background-color: var(--white-05-1);
+    margin: 10px;
+}
+
+.padding-1 {
+    padding: 30px;
+}
+
+.font-dark {
+    color: #333;
+    text-align: center;
+}
+
+span {
+    font-weight: 800;
+}
+
 
 /* BUTTONS */
 
@@ -320,6 +366,7 @@ input:focus {
     background-color: var(--wood-05-1);
     padding: 4px 12px;
     border-radius: 20px;
+    margin-top: 10px;
 }
 
 .search-bar-container {
