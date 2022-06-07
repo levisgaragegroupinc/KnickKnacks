@@ -102,13 +102,47 @@ h4 {
 }
  
 .paragraph-container {
-    margin: 12px 20%;
-
+    text-align: center;
+    line-height: 1.6;
+    max-width: 100%;
+    margin: 12px;
 }
 
 .grn-font {
     color: var(--green-05-4)
 }
+
+/* HERO ITEMS */
+.hero-statement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px #fff;
+    border-radius: 25px;
+    padding: 6px;
+    max-width: 300px;
+    min-width: 200px;
+    background-color: var(--white-05-1);
+    margin: 10px;
+}
+
+.padding-1 {
+    padding: 30px;
+}
+
+.font-dark {
+    color: #333;
+    text-align: center;
+}
+
 
 /* BUTTONS */
 
