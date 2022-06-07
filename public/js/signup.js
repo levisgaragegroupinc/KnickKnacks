@@ -1,5 +1,3 @@
-const { use } = require("bcrypt/promises");
-
 // fetch function for creating a new account (signup)
 const signupFormHandler = async (event) => {
   event.preventDefault();
@@ -19,7 +17,7 @@ const signupFormHandler = async (event) => {
   if (first_name && last_name && username && email && password) {
     const response = await fetch('/api/sessions/sign_up', {
       method: 'POST',
-      body: JSON.stringify({ first_name, last_name, username, email, password }),
+      body: JSON.stringify({ username, first_name, last_name, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
