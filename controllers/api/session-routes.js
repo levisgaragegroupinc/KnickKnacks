@@ -54,7 +54,6 @@ router.post("/sign_up", async (req, res) => {
             res.status(200).json(user_data);
         });
     } catch (err) {
-        console.log(err);
         res.status(400).json(err);
     }
 });
