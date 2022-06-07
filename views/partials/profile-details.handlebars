@@ -9,7 +9,7 @@
                     <h4>Bio</h4>
                 </div>
                 <div class="bio-content">
-                    <p class="bio">{{ user_bio }}</p>
+                    <p class="bio">{{ provider_bio }}</p>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="skills-list">
-               {{#each skills as |skill|}}
+               {{#each user.skill as |skill|}}
                {{>skill-details skill}}
                {{/each}}
             </div>

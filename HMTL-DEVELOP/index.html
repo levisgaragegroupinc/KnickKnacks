@@ -11,48 +11,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body style="background-image: url(./images/paint-1.jpg)">
+<body style="background-image: url(../public/images/paint-1.jpg)">
     <header>
         <nav>
             <a id="home-button" class="button" href="/"><h1>KnickKnacks</h1></a>
             <div class="btn-group">
                 <button class="button primary-btn" id="login">Login</button>
-                <button class="button secondary-btn" href="/signup">Signup</button>
+                <a class="button secondary-btn" href="/signup">Signup</a>
             </div>
         </nav>
     </header>
     <main>
-        <div>
-            <h2>On Demand</h2>
+    <h2 class="hero-statement">A Community Board for Everyone!</h2>
+        <div class="hero-statement-container">
+            <div class="box-container">
+            <div>
+                <h3 class="font-dark"><span>Job</span> that needs done?</h3>
+            </div>
+            <div class="paragraph-container">
+                <p class="font-dark">
+                    Search for providers. Then create an account and start requesting services.   
+                </p>
+            </div>
         </div>
-        <div>
-            <h3>How it works</h3>
+        <div class="box-container">
+            <div>
+                <h3 class="font-dark"><span>Knack</span> you can share?</h3>
+            </div>
+            <div class="paragraph-container">
+                <p class="font-dark">
+                    Create a bio to share your unique talent and start receiving requests.   
+                </p>
+            </div>
         </div>
-        <div class="paragraph-container">
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.
-            </p>
-        </div>
-
-
+    </div>
         <div class="search-container search-form">
             <div class="search-bar-container">
 
             <input id="search-bar" type="text" placeholder="Search by zip code...">
             <div class="drop-down">
                 <label for='skill' class="">
-                <select name="skills" id="skill-list-options" multipe>
-                <option selected>Select skill</option>
+                <select name="skills" id="skill-list-options" multipe placeholder="Select a knack">
+                <option selected>Select a knack</option>
                 <option value="paint">painting</option>
                 <option value="mechanic">auto mechanic</option>
                 <option value="gardening">gardening</option>

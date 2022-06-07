@@ -21,12 +21,12 @@
             <div class="btn-group">
                 {{#if logged_in}}
                 <button class="button tertiary-btn" id="logout">logout</button>
-                <button class="button quad-btn" href="/profile">My Profile</button>
+                <a class="button quad-btn" href="/profile">My Profile</a>
 
 
                 {{else}}
-                <button class="button primary-btn" href="/login" id="login">Login</button>
-                <button class="button secondary-btn" href="/signup">Signup</button>
+                <a class="button primary-btn" href="/login" id="login">Login</a>
+                <a class="button secondary-btn" href="/signup">Signup</a>
                 {{/if}}
             </div>
         </nav>

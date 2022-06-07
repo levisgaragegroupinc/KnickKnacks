@@ -19,6 +19,7 @@
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
+    "body-parser": "^1.20.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
@@ -26,5 +27,8 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
     "sequelize": "^6.20.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
