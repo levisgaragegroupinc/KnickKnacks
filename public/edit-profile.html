@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KnickKnacks</title>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+      </head>
+
+
+<body style="background-image: url(./images/paint-1.jpg)">
+    <header>
+        <nav>
+            <a id="home-button" class="button" href="/"><h1>KnickKnacks</h1></a>
+            <div class="btn-group">
+                <button class="button quad-btn" href="/logout">Logout</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="welcome-container">
+            <div class="profile-welcome">
+                <div>
+                    <h3>Welcome:</h3>
+                </div>
+                <div>
+                    <h3 class="nowrap" >Raji Marmuthu</h3>
+                </div>
+            </div>
+            <div class="request-counter-container">
+                <h3 class="nowrap">Request Counter</h3>
+                <h1 class="request-counter">1</h1>
+            </div>
+        </div>
+    <div class="bio-container">
+        <div class="edit-skills-btn-group">
+            <div>
+                <button class="button tertiary-btn" href="/profile">cancel</button>
+            </div>
+            <div>
+                <button class="button tertiary-btn" id="save-bio-btn">save</button>
+            </div>
+        </div>
+        <div>
+            <div class="profile-container-white">
+                <div>
+                    <div class="bio-header">
+                        <h4>Bio</h4>
+                    </div>
+                    <div class="bio-content">
+                        <textarea class="bio" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-container-white">
+                <div>
+                    <div class="bio-header">
+                        <h4>Skills</h4>
+                        <h4>border = selected!</h4>
+                    </div>
+                </div>
+                <form class="edit-skills-form">
+                    <div class="skills-options-list" id="checkbox">
+                        <label for="skill1" class="checkbox-container">painting
+                            <input type="checkbox" id="skill1" name="skill1" value="painting">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="skill2" class="checkbox-container">canning
+                            <input type="checkbox" id="skill2" name="skill2" value="canning">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="skill3" class="checkbox-container">plumbing
+                            <input type="checkbox" id="skill3" name="skill3" value="plumbing">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="skill4" class="checkbox-container">electrical
+                            <input type="checkbox" id="skill4" name="skill4" value="electrical">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>       
+    </main>
+</body>
+
+</html>
