@@ -4,6 +4,13 @@
             <h4>{{ username }}</h4>
             <button class="button quad-btn" href="/request-services/{{id}}">Request services</button>
         </div>
+        <div class="request-container" style="display: block">
+            <h4>Request field</h4>
+            <div class="request-content">
+                <textarea type="text" value="request-text" class="bio" id="request-text" name="request-text" rows="4rows" cols="50"></textarea>
+            </div>
+            <a class="button quad-btn" href="/request-services">Send request</a>
+        </div>
         <div class="bio-content">
             <h4>Bio:</h4>
             <p class="bio">{{ provider_bio }}</p>

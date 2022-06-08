@@ -471,6 +471,28 @@ label {
     margin-right: 16px;
 }
 
+/* SEND REQUEST FORM */
+.request-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.request-content {
+    padding-right: 15px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* BIO */
 .bio-container {
     display: flex;
@@ -484,6 +506,7 @@ label {
 }
 
 .provider-container {
+    display: ;
     margin: 12px 10%;
     padding: 12px 12px;
     background-color: var(--white-05-1);
