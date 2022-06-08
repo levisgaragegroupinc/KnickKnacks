@@ -22,7 +22,7 @@ const searchFormHandler = async (event) => {
         });
     
         if (response.ok) {
-            console.log(response.ok)
+            document.location.replace(`/results/skill/${searched_skill}`);
         } else {
             alert(response.statusText);
         }
@@ -36,14 +36,14 @@ const searchFormHandler = async (event) => {
             return
         } else{
             // Send a GET request to the API endpoint
-            let route = `/results/zipcode/${searched_zipcode}`;
+            let route = `/results/zip/${searched_zipcode}`;
 
             const response = await fetch(route, {
                 method: 'GET',
             });
         
             if (response.ok) {
-                console.log(response.ok)
+                document.location.replace(`/results/zip/${searched_zipcode}`);
             } else {
                 alert(response.statusText);
             }
@@ -65,7 +65,7 @@ const searchFormHandler = async (event) => {
             });
         
             if (response.ok) {
-                console.log(response.ok)
+                document.location.replace(`/results/zip_skill/${searched_zipcode}/${searched_skill}`);
             } else {
                 alert(response.statusText);
             }

@@ -123,6 +123,13 @@ h4 {
 }
 
 .hero-statement-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxes-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -221,6 +228,7 @@ span {
 .btn-group {
     margin-right: 10%;
     margin-left: 10%;
+    margin-top: 6px;
     flex-wrap: nowrap;
 }
     
@@ -366,7 +374,7 @@ input:focus {
     background-color: var(--wood-05-1);
     padding: 4px 12px;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .search-bar-container {
@@ -463,6 +471,28 @@ label {
     margin-right: 16px;
 }
 
+/* SEND REQUEST FORM */
+.request-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.request-content {
+    padding-right: 15px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* BIO */
 .bio-container {
     display: flex;
@@ -476,6 +506,7 @@ label {
 }
 
 .provider-container {
+    display: ;
     margin: 12px 10%;
     padding: 12px 12px;
     background-color: var(--white-05-1);
@@ -573,6 +604,20 @@ label {
 
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 746px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #home-button {
+        margin-left: 0;
+    }
+}
+
+
 @media only screen and (max-width: 580px) {
     nav {
         display: flex;
@@ -584,9 +629,4 @@ label {
     #home-button {
         margin-left: 0;
     }
-
-    .btn-group {
-        margin: 0;
-    }
-
 }

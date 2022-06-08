@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KnickKnacks</title>
+      
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+      
+        <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+      </head>
+
+
+<body style="background-image: url(./images/paint-1.jpg)">
+    <header>
+        <nav>
+            <a id="home-button" class="button" href="/"><h1>KnickKnacks</h1></a>
+            <div class="btn-group">
+                <button class="button primary-btn" id="login">Login</button>
+                <button class="button secondary-btn" href="/signup">Signup</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="search-container search-results-search-bar">
+            <dive class="search-bar-container">
+            <input id="search-bar" type="text" placeholder="Search by zip code...">
+            <div class="" id="drop-down">
+                <label for='skill' class="">
+                <select name="skills" id="skill-list-options" multipe>
+                <option selected>Select skill</option>
+                <option value="paint">painting</option>
+                <option value="mechanic">auto mechanic</option>
+                <option value="gardening">gardening</option>
+                </select>
+            </label>
+            </div>
+            
+            </dive>
+            <span uk-icon="icon: search" class="button icon-btn" id="search-submit-btn"></span>
+        </div>
+    <div class="provider-container">
+            <div class="request-header">
+                <h4>Username</h4>
+                <button class="button quad-btn" id="request-services">Request services</button>
+            </div>
+            <div class="request-container" style="display: block">
+                <h4>Request field</h4>
+                <div class="request-content">
+                    <textarea type="text" value="request-text" class="bio" id="request-text" name="request-text" rows="4rows" cols="50"></textarea>
+                </div>
+                <a class="button quad-btn" href="/request-services">Send request</a>
+            </div>
+            <div class="bio-content">
+                <h4>Bio:</h4>
+                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut.</p>
+            </div>
+        
+        <div class="skills-list">
+
+            <div class="skills-item">plumbing</div>
+            <div class="skills-item">electrical</div>
+
+        </div>
+    </div>
+    <div class="provider-container">
+        <div>
+            <div class="bio-header">
+                <h4>Username</h4>
+                <button class="button quad-btn" href="/request-services">Request services</button>
+            </div>
+            <div class="bio-content">
+                <h4>Bio:</h4>
+                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut.</p>
+            </div>
+        </div>
+        <div class="skills-list">
+
+            <div class="skills-item">plumbing</div>
+            <div class="skills-item">electrical</div>
+            <div class="skills-item">electrical</div>
+   
+
+        </div>
+    </div>     
+    </main>
+</body>
+
+</html>

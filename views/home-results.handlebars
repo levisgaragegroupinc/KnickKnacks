@@ -14,6 +14,8 @@
     </div>
     <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
 </div>
-{{#each provider as |provider|}}
+{{#each providers as |provider|}}
 {{>provider-details provider}}
 {{/each}}
+
+<script src="/public/js/request-service.js"></script>

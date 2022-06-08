@@ -4,12 +4,12 @@
             <h3>Welcome:</h3>
         </div>
         <div>
-            <h3 class="nowrap" >{{ first_name }} {{ last_name }}</h3>
+            <h3 class="nowrap" >{{ user.first_name }} {{ user.last_name }}</h3>
         </div>
     </div>
     <div class="request-counter-container">
         <h3 class="nowrap">Request Counter</h3>
-        <h1 class="request-counter">{{ request_#number }}</h1>
+        <h1 class="request-counter">{{ user.total_services_provided }}</h1>
     </div>
 </div>
 {{#if editing }}
