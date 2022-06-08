@@ -1,5 +1,23 @@
+<div class="search-container search-form">
+    <div class="search-bar-container">
+    <input id="search-bar" type="text" placeholder="Search by zip code...">
+    <div class="drop-down">
+        <label for='skill' class="">
+        <select name="skills" id="skill-list-options" multipe>
+        <option selected>Select skill</option>
+        <option value="paint">painting</option>
+        <option value="mechanic">auto mechanic</option>
+        <option value="gardening">gardening</option>
+        </select>
+    </label>
+    </div>
+    </div>
+    <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
+</div>
+
  <div class="hero-statement-container">
             <h2>A Community Board for Everyone!</h2>
+            <div class="boxes-container">
             <div class="box-container">
             <div>
                 <h3 class="font-dark"><span>Job</span> that needs done?</h3>
@@ -20,24 +38,7 @@
                 </p>
             </div>
         </div>
+        </div>
     </div>
-
-
-<div class="search-container search-form">
-    <div class="search-bar-container">
-    <input id="search-bar" type="text" placeholder="Search by zip code...">
-    <div class="drop-down">
-        <label for='skill' class="">
-        <select name="skills" id="skill-list-options" multipe>
-        <option selected>Select skill</option>
-        <option value="paint">painting</option>
-        <option value="mechanic">auto mechanic</option>
-        <option value="gardening">gardening</option>
-        </select>
-    </label>
-    </div>
-    </div>
-    <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
-</div>
 
 <script src="/js/search.js"></script>

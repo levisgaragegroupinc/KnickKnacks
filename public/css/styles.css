@@ -123,6 +123,7 @@ h4 {
 }
 
 .hero-statement-container {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -227,6 +228,7 @@ span {
 .btn-group {
     margin-right: 10%;
     margin-left: 10%;
+    margin-top: 6px;
     flex-wrap: nowrap;
 }
     
@@ -372,7 +374,7 @@ input:focus {
     background-color: var(--wood-05-1);
     padding: 4px 12px;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .search-bar-container {
