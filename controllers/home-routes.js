@@ -32,18 +32,43 @@ router.get("/signup", (req, res) => {
     });
 });
 
+router.get("/favicon.ico", (req, res) => {
+    res.status(404);
+});
 
 //Setting up router for search results 
-router.get("/:username", withAuth, async (req,res)=> {
+router.get("/:username", withAuth, async (req, res)=> {
+    const user_data = await User.findOne({
+        where: {
+            username: req.params.username
+        },
+        include: {
+            model: Skill,
+            as: "providers_skills"
+        }
+    });
+    const user = user_data.get({ plain: true });
+    
+    res.render("home-profile", { 
+        user,
+        logged_in: req.session.logged_in,
+        editting: false
+    });
+
+});
+
+// Add route to edit someone's profile
+router.get("/:username/edit", withAuth, async (req,res)=> {
     const user = await User.findOne({
         where: {
             username: req.params.username
         }
     });
     
-    res.render("profile", { 
+    res.render("home-profile", { 
         user,
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        editting: true
     });
 
 });
