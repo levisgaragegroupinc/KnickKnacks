@@ -125,6 +125,7 @@ h4 {
 .hero-statement-container {
     text-align: center;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -569,6 +570,7 @@ label {
     color: #333;
     margin: 10px 10px;
     padding: 12px 12px;
+    min-width: 300px;
     background-color: #ffffffdd;
     border-radius: 6px;
 }
