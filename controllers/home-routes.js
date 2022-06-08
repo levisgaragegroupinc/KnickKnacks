@@ -32,10 +32,6 @@ router.get("/signup", (req, res) => {
     });
 });
 
-router.get("/favicon.ico", (req, res) => {
-    res.status(404);
-});
-
 //Setting up router for search results 
 router.get("/:username", withAuth, async (req, res)=> {
     const user_data = await User.findOne({
