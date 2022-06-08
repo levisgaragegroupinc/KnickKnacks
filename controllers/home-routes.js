@@ -52,6 +52,22 @@ router.get("/profile", withAuth, async (req, res) => {
 
 });
 
+// Add route to edit someone's profile
+router.get("/profile/edit", withAuth, async (req, res)=> {
+    const user = await User.findOne({
+        where: {
+            username: req.params.username
+        }
+    });
+    
+    res.render("home-profile", { 
+        user,
+        logged_in: req.session.logged_in,
+        editting: true
+    });
+
+});
+
 //Setting up router for search results 
 router.get("/:username", withAuth, async (req, res)=> {
     const user_data = await User.findOne({
@@ -69,22 +85,6 @@ router.get("/:username", withAuth, async (req, res)=> {
         user,
         logged_in: req.session.logged_in,
         editting: false
-    });
-
-});
-
-// Add route to edit someone's profile
-router.get("/:username/edit", withAuth, async (req,res)=> {
-    const user = await User.findOne({
-        where: {
-            username: req.params.username
-        }
-    });
-    
-    res.render("home-profile", { 
-        user,
-        logged_in: req.session.logged_in,
-        editting: true
     });
 
 });
