@@ -128,6 +128,12 @@ h4 {
     justify-content: center;
 }
 
+.boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .box-container {
     display: flex;
     flex-direction: column;
@@ -573,6 +579,20 @@ label {
 
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 746px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #home-button {
+        margin-left: 0;
+    }
+}
+
+
 @media only screen and (max-width: 580px) {
     nav {
         display: flex;
@@ -584,9 +604,4 @@ label {
     #home-button {
         margin-left: 0;
     }
-
-    .btn-group {
-        margin: 0;
-    }
-
 }
