@@ -38,21 +38,23 @@ router.get("/signup", (req, res) => {
   });
 });
 
-router.get("/favicon.ico", (req, res) => {
-  res.status(404);
-});
-
-//Setting up router for search results
-router.get("/:username", withAuth, async (req, res) => {
-  const user_data = await User.findOne({
-    where: {
-      username: req.params.username,
-    },
-    include: {
-      model: Skill,
-      as: "providers_skills",
-    },
-  });
+router.get("/profile", withAuth, async (req, res) => {
+    const user_data = await User.findOne({
+        where: {
+            id: req.session.user_id
+        },
+        include: {
+            model: Skill,
+            as: "providers_skills"
+        }
+    });
+    const user = user_data.get({ plain: true });
+    
+    res.render("home-profile", { 
+        user,
+        logged_in: req.session.logged_in,
+        editting: false
+    });
 
   console.log("This is the user_data on the home-routes", user_data);
   const user = user_data.get({ plain: true });
@@ -65,18 +67,51 @@ router.get("/:username", withAuth, async (req, res) => {
 });
 
 // Add route to edit someone's profile
-router.get("/:username/edit", withAuth, async (req, res) => {
-  const user = await User.findOne({
-    where: {
-      username: req.params.username,
-    },
-  });
+router.get("/profile/edit", withAuth, async (req, res)=> {
+    const user = await User.findOne({
+        where: {
+            username: req.params.username
+        }
+    });
+    
+    res.render("home-profile", { 
+        user,
+        logged_in: req.session.logged_in,
+        editting: true
+    });
 
   res.render("home-profile", {
     user,
     logged_in: req.session.logged_in,
     editting: true,
   });
+});
+
+//Setting up router for search results 
+router.get("/:username", withAuth, async (req, res)=> {
+    const user_data = await User.findOne({
+        where: {
+            username: req.params.username
+        },
+        include: {
+            model: Skill,
+            as: "providers_skills"
+        }
+    });
+
+    if (!user_data) {
+        res.status(404).json({ message: `No user found with the username ${req.params.username}`});
+        return;
+    }
+
+    const user = user_data.get({ plain: true });
+    
+    res.render("home-profile", { 
+        user,
+        logged_in: req.session.logged_in,
+        editting: false
+    });
+
 });
 
 // Renders the form to request services from [username]
