@@ -23,7 +23,7 @@ const userData = [
       "username": "salsaAmiko",
       "first_name":  "Amiko",
       "last_name": "Salsa",
-      "email": "amiko2k20@aol.com",
+      "email": "rajeswarivmarimuthu@gmail.com",
       "password": "password12345",
       "provider": true,
       "provider_bio": "Passionate handy man fixing Electical lines. Understands the properties built since 1960 until now",
