@@ -79,6 +79,12 @@ router.get("/:username", withAuth, async (req, res)=> {
             as: "providers_skills"
         }
     });
+
+    if (!user_data) {
+        res.status(404).json({ message: `No user found with the username ${req.params.username}`});
+        return;
+    }
+
     const user = user_data.get({ plain: true });
     
     res.render("home-profile", { 
