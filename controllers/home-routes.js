@@ -32,6 +32,26 @@ router.get("/signup", (req, res) => {
     });
 });
 
+router.get("/profile", withAuth, async (req, res) => {
+    const user_data = await User.findOne({
+        where: {
+            id: req.session.user_id
+        },
+        include: {
+            model: Skill,
+            as: "providers_skills"
+        }
+    });
+    const user = user_data.get({ plain: true });
+    
+    res.render("home-profile", { 
+        user,
+        logged_in: req.session.logged_in,
+        editting: false
+    });
+
+});
+
 //Setting up router for search results 
 router.get("/:username", withAuth, async (req, res)=> {
     const user_data = await User.findOne({
