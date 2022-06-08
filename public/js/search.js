@@ -11,6 +11,8 @@ const searchFormHandler = async (event) => {
         return
     };
 
+    console.log(searched_skill);
+    console.log(!searched_zipcode);
     // when only searching a skill
     if (searched_skill !== "Select skill" && !searched_zipcode) {
         
