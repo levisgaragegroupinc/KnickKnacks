@@ -8,7 +8,7 @@
         </div>
     </div>
     <div>
-        <div class="profile-container-white">
+        <div class="profile-container-white" data-username="{{username}}">
             <div>
                 <div class="bio-header">
                     <h4>Bio</h4>
@@ -27,7 +27,7 @@
             </div>
             <form class="edit-skills-form">
                 <div class="skills-options-list" id="checkbox">
-                    {{#each skill_name as |skill_option|}}
+                    {{#each skills as |skill_option|}}
                     {{>skill-option-details skill_option}}
                     {{/each}}
                 </div>
