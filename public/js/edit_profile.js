@@ -1,23 +1,22 @@
 // fetch function for editing post
-const editPostHandler = async (event) => {
+const update_bio = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#title').value.trim();
-    const textAreaData = document.querySelector('#postContent');
-    const description = textAreaData.value.trim();
-    const id = textAreaData.getAttribute('data-id')
+    const textarea_bio = document.querySelector('#bio-text');
+    const description = textarea_bio.value.trim();
+    const username = textarea_bio.getAttribute('data-id')
   
     if (title && description) {
-      const response = await fetch(`/api/blogs/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({ title, description }),
+      const response = await fetch(`/api/bio/${username}`, {
+        method: 'POST',
+        body: JSON.stringify({ description }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
 //   test
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.reload();
       } else {
         alert('Failed to create project');
       }
@@ -41,8 +40,8 @@ const editPostHandler = async (event) => {
   };
   
   document
-  .querySelector('.editPost-form')
-  .addEventListener('submit', editPostHandler);
+  .querySelector('#save-bio-btn')
+  .addEventListener('click', update_bio);
   
   document
     .querySelector('.del-button')
