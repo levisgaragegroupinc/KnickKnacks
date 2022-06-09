@@ -63,12 +63,14 @@ router.get("/profile", withAuth, async (req, res) => {
 });
 
 // Add route to edit someone's profile
-router.get("/:username/edit", withAuth, async (req, res) => {
-    const user = await User.findOne({
+router.get("/profile/edit", withAuth, async (req, res) => {
+    const user_data = await User.findOne({
         where: {
-        username: req.session.user_id,
+            id: req.session.user_id,
         },
     });
+
+    const user = user_data.get({ plain: true });
 
     const skills_data = await Skill.findAll();
 
