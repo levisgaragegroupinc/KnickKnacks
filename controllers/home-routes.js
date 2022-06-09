@@ -68,7 +68,7 @@ router.get("/profile/edit", withAuth, async (req, res) => {
   res.render("home-profile", {
     user,
     logged_in: req.session.logged_in,
-    editting: true,
+    editing: true
   });
 });
 
