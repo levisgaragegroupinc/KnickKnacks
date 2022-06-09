@@ -1,19 +1,6 @@
 const router = require('express').Router();
 const { ProviderServiceArea , ProviderSkill, ServiceArea, Skill, User} = require('../../models');
 
-router.get("/", async (req, res) => {
-    try {
-        const skills_data = await Skill.findAll();
-
-        const skill_objects = skills_data.map(skill => skill.get({ plain: true }));
-        const skill_names = skill_objects.map(skill => skill.skill_name);
-
-        res.status(200).json(skill_names);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
 router.post("/:username", async (req, res) => {
     try {
         const user = await User.findOne({ where: { username: req.params.username }});
