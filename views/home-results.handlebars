@@ -1,17 +1,16 @@
 <div class="search-container search-results-search-bar">
-    <div class="search-bar-container">
-        <input id="search-bar" type="text" placeholder="Search by zip code...">
-        <div class="" id="drop-down">
-            <label for='skill' class="">
-                <select name="skills" id="skill-list-options" multipe>
-                    <option selected>Select skill</option>
-                    <option value="paint">painting</option>
-                    <option value="mechanic">auto mechanic</option>
-                    <option value="gardening">gardening</option>
-                </select>
-            </label>
-        </div>
+<div class="search-bar-container">
+    <input id="search-bar" type="text" placeholder="Search by zip code...">
+    <div class="drop-down">
+        <label for='skill' class="">
+            <select name="skills" id="skill-list-options" multipe>
+            {{#each skill_name as |skill_option|}}
+            {{>skill-search-details skill_option}}
+            {{/each}}
+            </select>
+        </label>
     </div>
+</div>
     <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
 </div>
 {{#each providers as |provider|}}

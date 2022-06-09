@@ -1,19 +1,17 @@
 <div class="search-container search-form">
-    <div class="search-bar-container">
-        <input id="search-bar" type="text" placeholder="Search by zip code...">
-        <div class="drop-down">
-            <label for='skill' class="">
+<div class="search-bar-container">
+    <input id="search-bar" type="text" placeholder="Search by zip code...">
+    <div class="drop-down">
+        <label for='skill' class="">
             <select name="skills" id="skill-list-options" multipe>
-            <option selected>Select skill</option>
-            <option value="Electrician">Electrician</option>
-            <option value="Plumber">Plumber</option>
-            <option value="Garderner">Garderner</option>
-            <option value="Catering">Catering</option>
-            <option value="Web Application Developer">Web Developer</option>
+            {{#each skill_name as |skill_option|}}
+            {{>skill-search-details skill_option}}
+            {{/each}}
             </select>
         </label>
-        </div>
     </div>
+</div>
+
     <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
 </div>
  <div class="hero-statement-container">
