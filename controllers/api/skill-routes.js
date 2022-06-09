@@ -5,9 +5,10 @@ router.get("/", async (req, res) => {
     try {
         const skills_data = await Skill.findAll();
 
-        const skills = skills_data.map(skill => skill.get({ plain: true }));
+        const skill_objects = skills_data.map(skill => skill.get({ plain: true }));
+        const skill_names = skill_objects.map(skill => skill.skill_name);
 
-        res.status(200).json(skills);
+        res.status(200).json(skill_names);
     } catch (err) {
         res.status(500).json(err);
     }
