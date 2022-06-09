@@ -13,11 +13,11 @@ const withAuth = require("../utils/withAuth");
 router.get("/", async (req, res) => {
     const skills_data = await Skill.findAll();
 
-    const skill_objects = skills_data.map(skill => skill.get({ plain: true }));
-    const skill_names = skill_objects.map(skill => skill.skill_name);
+    const skills = skills_data.map(skill => skill.get({ plain: true }));
+
     res.render("home", {
         logged_in: req.session.logged_in,
-        skills: skill_names
+        skills
     });
 });
 
@@ -63,7 +63,7 @@ router.get("/profile", withAuth, async (req, res) => {
 });
 
 // Add route to edit someone's profile
-router.get("/profile/edit", withAuth, async (req, res) => {
+router.get("/:username/edit", withAuth, async (req, res) => {
     const user = await User.findOne({
         where: {
         username: req.session.user_id,
@@ -72,14 +72,13 @@ router.get("/profile/edit", withAuth, async (req, res) => {
 
     const skills_data = await Skill.findAll();
 
-    const skill_objects = skills_data.map(skill => skill.get({ plain: true }));
-    const skill_names = skill_objects.map(skill => skill.skill_name);
+    const skills = skills_data.map(skill => skill.get({ plain: true }));
 
     res.render("home-profile", {
         user,
         logged_in: req.session.logged_in,
         editing: true,
-        skills: skill_names
+        skills
     });
 });
 
