@@ -4,7 +4,7 @@
     <div class="drop-down">
         <label for='skill' class="">
             <select name="skills" id="skill-list-options" multipe>
-            {{#each skill_name as |skill_option|}}
+            {{#each skills as |skill_option|}}
             {{>skill-search-details skill_option}}
             {{/each}}
             </select>
