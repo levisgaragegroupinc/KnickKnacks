@@ -10,7 +10,7 @@ const {
 const withAuth = require("../utils/withAuth");
 
 //Setting up router for rendering homepage
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
     const skills_data = await Skill.findAll();
 
     const skill_objects = skills_data.map(skill => skill.get({ plain: true }));
