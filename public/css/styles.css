@@ -231,11 +231,13 @@ span {
 
 .edit-skills-btn-group {
     display: flex;
+    align-items: center;
 }
 
 /* CHECKBOX */
 
 .checkbox-container {
+    white-space: nowrap;
     display: block;
     position: relative;
     padding-top: 4px;
@@ -454,7 +456,8 @@ label {
 }
 
 .skills-options-list {
-    display: flex;   
+    display: flex;  
+    flex-wrap: wrap; 
 }
 
 .skill-option {
