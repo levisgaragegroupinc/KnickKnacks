@@ -21,9 +21,14 @@ router.get("/skill/:skill", withAuth, async (req,res) => {
 
     const providers = providers_data.map(provider => provider.get({ plain: true }));
 
+    const skills_data = await Skill.findAll();
+
+    const skills = skills_data.map(skill => skill.get({ plain: true }));
+
     res.render("home-results", { 
         providers, 
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        skills
     });
 });
 
@@ -42,9 +47,14 @@ router.get("/zip/:zipcode", withAuth, async (req,res) => {
 
     const providers = providers_data.map(provider => provider.get({ plain: true }));
 
+    const skills_data = await Skill.findAll();
+
+    const skills = skills_data.map(skill => skill.get({ plain: true }));
+
     res.render("home-results", { 
         providers, 
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        skills
     });
 });
 
@@ -66,9 +76,14 @@ router.get("/zip_skill/:zipcode/:skill", withAuth, async (req,res) => {
 
     const providers = providers_data.map(provider => provider.get({ plain: true }));
 
+    const skills_data = await Skill.findAll();
+
+    const skills = skills_data.map(skill => skill.get({ plain: true }));
+
     res.render("home-results", { 
         providers, 
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        skills
     });
 });
 
