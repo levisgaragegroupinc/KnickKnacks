@@ -2,8 +2,7 @@
 
 const requestSvcHandler = async (event) => {
     event.preventDefault();
-    const notes_container = document.getElementById('#req-container');
-    notes_container.style.display = block;
+    document.getElementById('req-container').style.display = "block";
 };
 
 
@@ -11,11 +10,12 @@ const requestNotesHandler = async (event) => {
     event.preventDefault();
 
     //variables to retrieve provider_username and requestor notes
-    const request_notes = document.querySelector('#request-text').value.trim();
-    const provider_username = document.querySelector('#prov-username').value.trim();
+    const request_notes = document.getElementById('request-text');
+    const provider_username = document.getElementById('prov-username');
 
+    //Post to send email notification 
     if (request_notes) {
-        const response = await fetch('/request/sendemail', {
+        const response = await fetch('/api/request/sendemail', {
             method: 'POST',
             body: JSON.stringify({ provider_username, request_notes }),
             headers: { 'Content-Type': 'application/json' },
@@ -24,9 +24,8 @@ const requestNotesHandler = async (event) => {
         if (response.ok) {
             console.log(response);
             alert('Provider is notifed and will be in touch with you soon');
-            const notes_container = document.getElementById('#req-container');
-            document.querySelector('#request-text').value = '';
-            notes_container.style.display = none;
+            document.getElementById('req-container').style.display = "none";
+            document.getElementById('request-text').value = '';
         } else {
             alert(response.statusText);
         }
