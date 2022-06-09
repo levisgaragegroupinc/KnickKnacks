@@ -1,6 +1,6 @@
 <div class="bio-container">
     <div>
-        <button uk-icon="icon: pencil" class="button edit-icon-btn" href="/edit"></button>
+        <a uk-icon="icon: pencil" class="edit-icon-btn" href="/edit"></a>
     </div>
     <div>
         <div class="profile-container-white">
@@ -9,7 +9,7 @@
                     <h4>Bio</h4>
                 </div>
                 <div class="bio-content">
-                    <p class="bio">{{ provider_bio }}</p>
+                    <p class="bio">{{ user.provider_bio }}</p>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="skills-list">
-               {{#each provider_skills as |skill|}}
+               {{#each user.providers_skills as |skill|}}
                {{>skill-details skill}}
                {{/each}}
             </div>

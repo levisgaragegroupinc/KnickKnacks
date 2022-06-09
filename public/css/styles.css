@@ -1,20 +1,12 @@
 :root {
-
---blue-01: #87CEEB;
---blue-02: #1446A0;
---blue-03: #3066BE;
---green-01: #AEB4A9;
---green-02: #7D7B7D;
---sand-01: #E0C1B3;
 --grey-01: #7D7B7D;
---grey-02: #C7C6C7;
 
 /* PRIMARY COLOR GROUP 5 */
 --pink-05-1: #EBA7A7;
 --pink-05-2: #d69898;
 --pink-05-3: #C37D92;
 --black-05-1: #333;
---black-05-2:  rgba(51, 51, 51, 0.863);
+--black-05-2: rgba(51, 51, 51, 0.863);
 --white-05-1: #ffffffdd; 
 --grey-05-1: #E2E2E2;
 --grey-05-2: #E2E2E261;
@@ -322,14 +314,16 @@ span {
 }
 
 .edit-icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-05-1);
     border-radius: 50px;
-    padding: 4px 6px;
+    padding: 6px 6px;
 }
 
 .edit-icon-btn:hover {
-    border-radius: 50px;
-    padding: 4px 6px;
-    background-color: rgb(228, 228, 228);
+    background-color: var(--grey-05-1);
 }
 
 .save-icon-btn {
@@ -482,18 +476,6 @@ label {
     padding-right: 15px;
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* BIO */
 .bio-container {
     display: flex;
@@ -507,7 +489,6 @@ label {
 }
 
 .provider-container {
-    display: ;
     margin: 12px 10%;
     padding: 12px 12px;
     background-color: var(--white-05-1);
@@ -606,7 +587,7 @@ label {
 
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 746px) {
+@media only screen and (max-width: 784px) {
     nav {
         display: flex;
         flex-direction: column;
