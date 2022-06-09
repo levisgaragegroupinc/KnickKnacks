@@ -1,28 +1,29 @@
 // fetch function for editing post
-const editPostHandler = async (event) => {
+const update_bio = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#title').value.trim();
-    const textAreaData = document.querySelector('#postContent');
-    const description = textAreaData.value.trim();
-    const id = textAreaData.getAttribute('data-id')
+    const textarea_bio = document.querySelector('#bio-text').value.trim();
+    const username_data = document.querySelector('.profile-container-white') ;
+    const username = username_data.getAttribute('data-id');
   
-    if (title && description) {
-      const response = await fetch(`/api/blogs/${id}`, {
-        method: 'PUT',
-        body: JSON.stringify({ title, description }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-//   test
-      if (response.ok) {
-        document.location.replace('/dashboard');
-      } else {
-        alert('Failed to create project');
-      }
-    }
-  };
+    console.log(textarea_bio);
+    console.log(username);
+    
+    // const response = await fetch(`/api/bio/${username}`, {
+    //   method: 'POST',
+    //   body: JSON.stringify({ textarea_bio }),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // });
+
+    // if (response.ok) {
+    //   document.location.reload();
+    // } else {
+    //   alert('Failed to create project');
+    // }
+};
+
   //  fetch function to delete a post
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
@@ -41,8 +42,8 @@ const editPostHandler = async (event) => {
   };
   
   document
-  .querySelector('.editPost-form')
-  .addEventListener('submit', editPostHandler);
+  .querySelector('#save-bio-btn')
+  .addEventListener('click', update_bio);
   
   document
     .querySelector('.del-button')
