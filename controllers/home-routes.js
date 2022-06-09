@@ -61,14 +61,8 @@ router.get("/profile", withAuth, async (req, res) => {
 router.get("/profile/edit", withAuth, async (req, res) => {
   const user = await User.findOne({
     where: {
-      username: req.params.username,
+      username: req.session.user_data,
     },
-  });
-
-  res.render("home-profile", {
-    user,
-    logged_in: req.session.logged_in,
-    editting: true,
   });
 
   res.render("home-profile", {
