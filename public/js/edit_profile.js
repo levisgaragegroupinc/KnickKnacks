@@ -1,51 +1,77 @@
-// fetch function for editing post
+const prov_username = document.querySelector('#prov-username');
+const username = prov_username.getAttribute('data-u_n')
+    
+// fetch function for editing bio
 const update_bio = async (event) => {
     event.preventDefault();
   
-    const textarea_bio = document.querySelector('#bio-text').value.trim();
-    const username_data = document.querySelector('.profile-container-white') ;
-    const username = username_data.getAttribute('data-id');
-  
-    console.log(textarea_bio);
-    console.log(username);
+    const bio = document.querySelector('#bio-text').value.trim();
     
-    // const response = await fetch(`/api/bio/${username}`, {
-    //   method: 'POST',
-    //   body: JSON.stringify({ textarea_bio }),
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // });
+    // console.log(textarea_bio);
+    // console.log(username)
 
-    // if (response.ok) {
-    //   document.location.reload();
-    // } else {
-    //   alert('Failed to create project');
-    // }
+    const response = await fetch(`/api/bio/${username}`, {
+      method: 'POST',
+      body: JSON.stringify({ bio }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to update bio');
+    }
 };
 
-  //  fetch function to delete a post
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/blogs/${id}`, {
-        method: 'DELETE',
+//  fetch function to delete a post
+const edit_skills = async (event) => {
+  if (event.target.hasAttribute('data-skill')) {
+    const skill = event.target.getAttribute('data-skill');
+
+    console.log(skill)
+    console.log(username)
+    // if adding a new skill
+    if (skill !== selected){
+      const response = await fetch(`/api/skill/${username}`, {
+        method: 'POST',
+        body: JSON.stringify({ skill }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/');
       } else {
-        alert('Failed to delete project');
+        alert('Failed to update skill');
       }
     }
-  };
+    // if removing a skill
+    else {
+      const response = await fetch(`/api/skill/${username}`, {
+        method: 'DELETE',
+        body: JSON.stringify({ skill }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/');
+      } else {
+        alert('Failed to update skill');
+      }
+    }
+  }
+};
   
   document
   .querySelector('#save-bio-btn')
   .addEventListener('click', update_bio);
   
   document
-    .querySelector('.del-button')
-    .addEventListener('click', delButtonHandler);
+    .querySelector('.edit-skills-form')
+    .addEventListener('click', edit_skills);
   

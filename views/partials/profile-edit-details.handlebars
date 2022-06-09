@@ -8,13 +8,13 @@
         </div>
     </div>
     <div>
-        <div class="profile-container-white" data-username="{{username}}">
+        <div class="profile-container-white">
             <div>
                 <div class="bio-header">
                     <h4>Bio</h4>
                 </div>
                 <div class="bio-content">
-                    <textarea type="text" value={{provider_bio}} class="bio" autocomplete="off" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
+                    <textarea type="text" class="bio" autocomplete="off" id="bio-text" name="bio-text" rows="4rows" cols="50">{{user.provider_bio}}</textarea>
                 </div>
             </div>
         </div>
@@ -35,5 +35,3 @@
         </div>
     </div> 
 </div>      
-
-<script src="/js/edit_profile.js"
