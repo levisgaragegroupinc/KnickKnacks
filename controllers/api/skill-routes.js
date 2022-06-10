@@ -4,21 +4,41 @@ const { ProviderServiceArea , ProviderSkill, ServiceArea, Skill, User} = require
 router.post("/:username", async (req, res) => {
     try {
         const user = await User.findOne({ where: { username: req.params.username }});
-        const existing_skill = await Skill.findOne({ where: { skill_name: req.body.skill }});
+        if (!user) {
+            res.status(404).json({ message: "There is no user with this username"});
+            return;
+        }
+        if (!req.body.skill) {
+            res.status(400).json({ message: "Request body must contain a skill property"});
+        }
+        const existing_skill_data = await Skill.findOne({ where: { skill_name: req.body.skill }});
+        const existing_skill = existing_skill_data.get({ plain: true });
         let new_skill;
         if (!existing_skill) {
             new_skill = await Skill.create({ skill_name: req.body.skill });
         } else {
             new_skill = existing_skill;
+            const existing_record = await ProviderSkill.findOne({
+                where: {
+                    skill_id: new_skill.id,
+                    user_id: user.id
+                }
+            });
+            console.log("Existing record:", existing_record);
+            if (existing_record) {
+                res.status(409).json({ message: `${req.params.username} is already associated with ${req.body.skill}` });
+                return;
+            }
+            await ProviderSkill.create({
+                skill_id: new_skill.id,
+                user_id: user.id
+            });
+            user.provider = true;
+    
+            res.status(201).json({ message: `${req.body.skill} added as a new skill for ${req.params.username}!` });
         }
-        await ProviderSkill.create({
-            skill_id: new_skill.id,
-            user_id: user.id
-        });
-        user.provider = true;
-
-        res.status(201).json({ message: `${req.body.skill} added as a new skill for ${req.params.username}!` });
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
