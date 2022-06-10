@@ -68,13 +68,23 @@ router.get("/profile/edit", withAuth, async (req, res) => {
         where: {
             id: req.session.user_id,
         },
+        include: {
+            model: Skill,
+            as: "providers_skills"
+        }
     });
 
     const user = user_data.get({ plain: true });
 
     const skills_data = await Skill.findAll();
 
-    const skills = skills_data.map(skill => skill.get({ plain: true }));
+    const plain_skills = skills_data.map(skill => skill.get({ plain: true }));
+
+    const skills = plain_skills.map(skill => {
+        skill.has_skill = user.providers_skills.includes(skill);
+        return skill;
+    });
+    console.log(skills);
 
     res.render("home-profile", {
         user,
