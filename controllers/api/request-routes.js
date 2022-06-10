@@ -9,12 +9,9 @@ router.post ('/sendemail', async (req,res)=> {
 
     try {
 
-      const requestor_data = await User.findByPk(2);
-      //const requestor_data = await User.findByPk(req.session.user_id);
+      const requestor_data = await User.findByPk(req.session.user_id);
       const provider_data  = await User.findOne({ where: { username: req.body.provider_username }});
 
-      // console.log('requestor_data', requestor_data);
-      // console.log('provider_data', provider_data);
 
       const requestor = requestor_data.get({ plain: true });
       const provider = provider_data.get({ plain: true });
