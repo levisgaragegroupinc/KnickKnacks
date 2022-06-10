@@ -25,10 +25,12 @@ const update_bio = async (event) => {
     }
 };
 
-//  fetch function to delete a post
+//  fetch function to update skills
 const edit_skills = async (event) => {
   if (event.target.hasAttribute('data-skill')) {
     const skill = event.target.getAttribute('data-skill');
+
+    const is_selected = 
 
     console.log(skill)
     console.log(username)
