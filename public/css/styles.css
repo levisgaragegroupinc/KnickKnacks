@@ -59,7 +59,7 @@ textarea {
     box-sizing: border-box;
     padding: 5px;
     width: 100%;
-    min-width: 60vw;
+    min-width: 300px;
     resize: none;
 }
 
