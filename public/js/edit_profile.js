@@ -32,11 +32,13 @@ const edit_skills = async (event) => {
 
     const is_selected = event.target.getAttribute('class');
 
-    console.log(skill);
-    console.log(username);
-    console.log(is_selected);
+    // console.log(skill);
+    // console.log(username);
+    // console.log(is_selected);
+    // console.log(is_selected == 'checkbox-container check-button-default')
+
     // if adding a new skill
-    if (is_selected == true){
+    if (is_selected == 'checkbox-container check-button-default'){
       const response = await fetch(`/api/skill/${username}`, {
         method: 'POST',
         body: JSON.stringify({ skill }),
@@ -46,7 +48,7 @@ const edit_skills = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
         alert('Failed to update skill');
       }
@@ -62,9 +64,9 @@ const edit_skills = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
-        alert('Failed to update skill');
+        alert('Failed to delete skill');
       }
     }
   }
