@@ -23,7 +23,6 @@
 --yellow-05-1: #FEB300;
 --yellow-05-2: #f8d583;
 --yellow-05-3: #f8cc64;
---red-05-01: #FF0000;
 }
 
 body {
@@ -59,7 +58,7 @@ textarea {
     box-sizing: border-box;
     padding: 5px;
     width: 100%;
-    min-width: 300px;
+    min-width: 60vw;
     resize: none;
 }
 
@@ -252,18 +251,12 @@ span {
     background-color: var(--yellow-05-3);
 }
 
-/* .checkbox-container input:checked ~ .checkmark {
-    background-color: var(--green-05-4);
-    border: solid 2px var(--grey-01);
-} */
-
 .check-button-default {
     background-color: var(--white-05-1);
 }
 
 .check-button-selected {
     background-color: var(--green-05-4);
-    border: solid 2px var(--grey-01);
 }
  
 .checkmark:after {
@@ -445,10 +438,6 @@ label {
     padding-right: 15px;
     margin-bottom: 15px;
 }
- 
-#req-notes-btn {
-    /* margin-bottom: 40px; */
-}
 
 .request-container {
     margin-bottom: 15px;
@@ -486,10 +475,6 @@ label {
 .bio-content {
    padding-right: 15px;
    min-width: 60vw;
-}
-
-.error-txt {
-    color: var(--red-05-01);
 }
 
 .skills-list {
