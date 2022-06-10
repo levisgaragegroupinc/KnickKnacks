@@ -84,7 +84,6 @@ router.get("/profile/edit", withAuth, async (req, res) => {
         skill.has_skill = user.providers_skills.includes(skill);
         return skill;
     });
-    console.log(skills);
 
     res.render("home-profile", {
         user,
