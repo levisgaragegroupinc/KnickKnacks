@@ -14,6 +14,12 @@ router.post("/:username", async (req, res) => {
         const existing_skill_data = await Skill.findOne({ where: { skill_name: req.body.skill }});
         const existing_skill = existing_skill_data.get({ plain: true });
         let new_skill;
+       
+        // console.log(req.body)
+        // console.log(!existing_skill)
+        // console.log(existing_skill!==req.body.skill)
+        // console.log(existing_skill.dataValues.skill_name)
+       
         if (!existing_skill) {
             new_skill = await Skill.create({ skill_name: req.body.skill });
         } else {
