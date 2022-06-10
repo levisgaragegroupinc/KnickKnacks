@@ -439,6 +439,10 @@ label {
     padding-right: 15px;
     margin-bottom: 15px;
 }
+ 
+#req-notes-btn {
+    /* margin-bottom: 40px; */
+}
 
 .request-container {
     margin-bottom: 15px;
