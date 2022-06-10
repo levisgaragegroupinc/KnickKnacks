@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { ProviderServiceArea , ProviderSkill, ServiceArea, Skill, User} = require('../../models');
+const { ProviderServiceArea , ProviderSkill, ServiceArea, Skill, User} = require("../../models");
 
 router.post("/:username", async (req, res) => {
     try {
