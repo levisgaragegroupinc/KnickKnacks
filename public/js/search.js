@@ -7,12 +7,12 @@ const searchFormHandler = async (event) => {
     var searched_skill = document.querySelector('#skill-list-options').value.trim();
  
     // if search button is clicked without selecting a skill or providing a zipcode, do nothing
-    if (searched_skill == "Select skill" && !searched_zipcode) {
+    if (searched_skill == "Select-skill" && !searched_zipcode) {
         return
     };
 
     // when only searching a skill
-    if (searched_skill !== "Select skill" && !searched_zipcode) {
+    if (searched_skill !== "Select-skill" && !searched_zipcode) {
         
         // Send a GET request to the API endpoint
         let route = `/results/skill/${searched_skill}`;
@@ -29,7 +29,7 @@ const searchFormHandler = async (event) => {
     };
 
     // when only searching a zipcode
-    if (searched_skill == "Select skill" && searched_zipcode) {
+    if (searched_skill == "Select-skill" && searched_zipcode) {
         // verify zipcode is a number and contains 5 digits
         if (searched_zipcode.length != 5 || isNaN(searched_zipcode) === true) {
             alert("ZIP code must be five numerical digits long");
@@ -51,7 +51,7 @@ const searchFormHandler = async (event) => {
     };
 
     // when searching a zipcode and skill
-    if (searched_skill !== "Select skill" && searched_zipcode) {
+    if (searched_skill !== "Select-skill" && searched_zipcode) {
         // verify zipcode is a number and contains 5 digits
         if (searched_zipcode.length != 5 || isNaN(searched_zipcode) === true) {
             alert("ZIP code must be five numerical digits long");

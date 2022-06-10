@@ -1,22 +1,20 @@
 <div class="search-container search-form">
-    <div class="search-bar-container">
-    <input id="search-bar" type="text" placeholder="Search by zip code...">
+<div class="search-bar-container">
+    <input id="search-bar" type="text" autocomplete="off" placeholder="Search by zip code...">
     <div class="drop-down">
         <label for='skill' class="">
-        <select name="skills" id="skill-list-options" multipe>
-        <option selected>Select skill</option>
-        <option value="Electrician">Electrician</option>
-        <option value="Plumber">Plumber</option>
-        <option value="Garderner">Garderner</option>
-         <option value="Catering">Catering</option>
-          <option value="Web Application Developer">Web Application Developer</option>
-        </select>
-    </label>
+            <select name="skills" id="skill-list-options" multipe>
+            <option value="Select-skill">Select Knack</option>    
+            {{#each skills as |skill_option|}}
+            {{>skill-search-details skill_option}}
+            {{/each}}
+            </select>
+        </label>
     </div>
-    </div>
-    <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
 </div>
 
+    <span uk-icon="icon: search" class="button search-icon-btn" id="search-submit-btn"></span>
+</div>
  <div class="hero-statement-container">
             <h2>A Community Board for Everyone!</h2>
             <div class="boxes-container">
@@ -40,7 +38,7 @@
                 </p>
             </div>
         </div>
-        </div>
     </div>
+</div>
 
 <script src="/js/search.js"></script>

@@ -1,7 +1,7 @@
 <div class="bio-container">
     <div class="edit-skills-btn-group">
         <div>
-            <button class="button tertiary-btn" href="/profile">cancel</button>
+            <a class="button tertiary-btn" href="/profile">cancel</a>
         </div>
         <div>
             <button class="button tertiary-btn" id="save-bio-btn">save</button>
@@ -14,7 +14,7 @@
                     <h4>Bio</h4>
                 </div>
                 <div class="bio-content">
-                    <textarea type="text" value={{provider_bio}} class="bio" id="bio-text" name="bio-text" rows="4rows" cols="50"></textarea>
+                    <textarea type="text" class="bio" autocomplete="off" id="bio-text" name="bio-text" rows="4rows" cols="50">{{user.provider_bio}}</textarea>
                 </div>
             </div>
         </div>
@@ -22,15 +22,25 @@
             <div>
                 <div class="bio-header">
                     <h4>Skills</h4>
-                    <h4>border = selected!</h4>
                 </div>
             </div>
             <form class="edit-skills-form">
                 <div class="skills-options-list" id="checkbox">
-                    {{#each skill_name as |skill_option|}}
+                    {{#each skills as |skill_option|}}
                     {{>skill-option-details skill_option}}
                     {{/each}}
                 </div>
+            </form>
+        </div>
+        <div class="profile-container-white">
+            <div>
+                <div class="bio-header">
+                    <h4>Service Area</h4>
+                </div>
+            </div>
+            <form class="edit-skills-form">
+                <input id="new_zipcode" type="text">
+                <button onclick="add_area(event)">Add Service Area!</button>
             </form>
         </div>
     </div> 

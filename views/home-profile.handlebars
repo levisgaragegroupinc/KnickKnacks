@@ -4,16 +4,22 @@
             <h3>Welcome:</h3>
         </div>
         <div>
-            <h3 class="nowrap" >{{ user.first_name }} {{ user.last_name }}</h3>
+            <h3 id="prov-username" class="nowrap" data-u_n="{{user.username}}">{{ user.first_name }} {{ user.last_name }}</h3>
         </div>
     </div>
     <div class="request-counter-container">
         <h3 class="nowrap">Request Counter</h3>
+        {{#if user.total_services_provided}}
         <h1 class="request-counter">{{ user.total_services_provided }}</h1>
+        {{else}}
+        <h1 class="request-counter">0</h1>
+        {{/if}}
     </div>
 </div>
 {{#if editing }}
 {{>profile-edit-details }}
+<script src="/js/edit_profile.js"></script>
+<script src="/js/areas.js"></script>
 {{else}}
 {{>profile-details}}
 {{/if}}

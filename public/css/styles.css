@@ -1,20 +1,10 @@
 :root {
-
---blue-01: #87CEEB;
---blue-02: #1446A0;
---blue-03: #3066BE;
---green-01: #AEB4A9;
---green-02: #7D7B7D;
---sand-01: #E0C1B3;
---grey-01: #7D7B7D;
---grey-02: #C7C6C7;
-
 /* PRIMARY COLOR GROUP 5 */
 --pink-05-1: #EBA7A7;
 --pink-05-2: #d69898;
 --pink-05-3: #C37D92;
 --black-05-1: #333;
---black-05-2:  rgba(51, 51, 51, 0.863);
+--black-05-2: rgba(51, 51, 51, 0.863);
 --white-05-1: #ffffffdd; 
 --grey-05-1: #E2E2E2;
 --grey-05-2: #E2E2E261;
@@ -22,7 +12,6 @@
 --blue-05-1: #87CEEB;
 --blue-05-2: #7fbfd8;
 --blue-05-3: #478eb4e5;
-
 --purple-05-1: #beb4ee;
 --purple-05-2: #a59bcc;
 --purple-05-3: #a59bcc;
@@ -30,13 +19,10 @@
 --green-05-2: #1a6847;
 --green-05-3: #1a6848d0;
 --green-05-4: #22c581;
-
-
 --wood-05-1: #F8DFC1AA;
 --yellow-05-1: #FEB300;
 --yellow-05-2: #f8d583;
 --yellow-05-3: #f8cc64;
-
 }
 
 body {
@@ -46,7 +32,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: aqua;
 }
 
 header {
@@ -67,12 +52,13 @@ main {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 32px;
-
 }
 
 textarea {
-   width: 100%;
-   min-width: 300px;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    min-width: 60vw;
     resize: none;
 }
 
@@ -108,23 +94,10 @@ h4 {
     margin: 6px;
 }
 
-.grn-font {
-    color: var(--green-05-4)
-}
-
-/* HERO ITEMS */
-.hero-statement {
-    color: #fff;
-    background-color: var(--green-05-3);
-    padding: 6px 12px; 
-    border-radius: 10px;  
-    text-align: center;
-    min-width: 300px;
-}
-
 .hero-statement-container {
     text-align: center;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -148,22 +121,18 @@ h4 {
     margin: 10px;
 }
 
-.padding-1 {
-    padding: 30px;
-}
-
+/* styles the font color on the home page */
 .font-dark {
     color: #333;
     text-align: center;
 }
 
+/* styles the font weight for Job and Knack text */
 span {
     font-weight: 800;
 }
 
-
 /* BUTTONS */
-
 .button {
     border-radius: 6px;
     border: none;
@@ -206,7 +175,6 @@ span {
 
 .quad-btn:hover {
     background-color: var(--green-05-2);
-
 }
 
 .alt-btn {
@@ -214,12 +182,11 @@ span {
     background-color: var(--black-05-2);
 }
 
-
 .alt-btn:hover {
     background-color: var(--green-05-1);
 }
 
-
+/* sets the font style for the logo name */
 #home-button {
     font-family: 'Press Start 2P', cursive;
     margin-left: 20%;
@@ -238,11 +205,12 @@ span {
 
 .edit-skills-btn-group {
     display: flex;
+    align-items: center;
 }
 
 /* CHECKBOX */
-
 .checkbox-container {
+    white-space: nowrap;
     display: block;
     position: relative;
     padding-top: 4px;
@@ -283,11 +251,14 @@ span {
     background-color: var(--yellow-05-3);
 }
 
-.checkbox-container input:checked ~ .checkmark {
-    background-color: var(--green-05-4);
-    border: solid 2px var(--grey-01);
+.check-button-default {
+    background-color: var(--white-05-1);
 }
-  
+
+.check-button-selected {
+    background-color: var(--green-05-4);
+}
+ 
 .checkmark:after {
     content: "";
     position: absolute;
@@ -321,14 +292,16 @@ span {
 }
 
 .edit-icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-05-1);
     border-radius: 50px;
-    padding: 4px 6px;
+    padding: 6px 6px;
 }
 
 .edit-icon-btn:hover {
-    border-radius: 50px;
-    padding: 4px 6px;
-    background-color: rgb(228, 228, 228);
+    background-color: var(--grey-05-1);
 }
 
 .save-icon-btn {
@@ -342,19 +315,7 @@ span {
     background-color: greenyellow;
 }
 
-.cancel-icon-btn {
-    border-radius: 50px;
-    padding: 4px 6px;
-}
-
-.cancel-icon-btn:hover {
-    border-radius: 50px;
-    padding: 4px 6px;
-    background-color: red;
-}
-
 /* SEARCH BARS */
-
 input:focus {
     outline: none;
 }
@@ -381,17 +342,14 @@ input:focus {
     display: flex;
     background-color: #fff;
     border-radius: 50px;
-
 }
 
 .search-results-search-bar {
     margin: 32px;
 }
 
-
 /* DROP DOWNS */
 select {
-
     outline: none;
     border: none;
     cursor: pointer;
@@ -401,17 +359,16 @@ select {
     font-size: 16px;
     padding: 6px 6px;
     line-height: 3;
+    width: 140px;
 }
 
 select:focus {
     outline: none;
 }
 
-
 .drop-down {
     position: relative;
     width: fit-content;
-
 }
 
 /* FORMS */
@@ -450,7 +407,6 @@ label {
     padding: 4px 8px;
 }
 
-
 .form-container {
     border: solid 2px #fff;
     border-radius: 25px;
@@ -459,7 +415,8 @@ label {
 }
 
 .skills-options-list {
-    display: flex;   
+    display: flex;  
+    flex-wrap: wrap; 
 }
 
 .skill-option {
@@ -479,19 +436,12 @@ label {
 
 .request-content {
     padding-right: 15px;
- }
+    margin-bottom: 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.request-container {
+    margin-bottom: 15px;
+}
 
 /* BIO */
 .bio-container {
@@ -506,11 +456,9 @@ label {
 }
 
 .provider-container {
-    display: ;
     margin: 12px 10%;
     padding: 12px 12px;
     background-color: var(--white-05-1);
-
     border-radius: 6px;
 }
 
@@ -519,14 +467,14 @@ label {
     justify-content: space-between;
 }
 
-
 .bio {
-    padding: 6px 0px;
+    padding: 6px 6px;
     color: #333;
 }
 
 .bio-content {
    padding-right: 15px;
+   min-width: 60vw;
 }
 
 .skills-list {
@@ -544,9 +492,7 @@ label {
     font-size: 14px;
 }
 
-
 /* PROFILE ITEMS */
-
 .welcome-container {
     display: flex;
     flex-wrap: wrap;
@@ -569,10 +515,12 @@ label {
     color: #333;
     margin: 10px 10px;
     padding: 12px 12px;
+    min-width: 300px;
     background-color: #ffffffdd;
     border-radius: 6px;
 }
 
+/* prevents text wrap on home-profile first name and last name */
 .nowrap {
     white-space: nowrap;
 }
@@ -602,14 +550,13 @@ label {
     background-color: var(--green-05-3);
 }
 
-
 /* MEDIA QUERIES */
-@media only screen and (max-width: 746px) {
+/* medium screen */
+@media only screen and (max-width: 784px) {
     nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     #home-button {
@@ -617,13 +564,12 @@ label {
     }
 }
 
-
+/* small screen */
 @media only screen and (max-width: 580px) {
     nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     #home-button {

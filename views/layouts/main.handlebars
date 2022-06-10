@@ -9,20 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body style="background-image: url(./images/paint-1.jpg)">
+<body style="background-image: url(/images/paint-1.jpg)">
     <header>
         <nav>
             <a id="home-button" class="button" href="/"><h1>KnickKnacks</h1></a>
             <div class="btn-group">
                 {{#if logged_in}}
-                <button class="button tertiary-btn" id="logout">logout</button>
                 <a class="button quad-btn" href="/profile">My Profile</a>
-
+                <button class="button tertiary-btn" id="logout">logout</button>
 
                 {{else}}
                 <a class="button primary-btn" href="/login" id="login">Login</a>
