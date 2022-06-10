@@ -1,5 +1,5 @@
 const prov_username = document.querySelector('#prov-username');
-const username = prov_username.getAttribute('data-u_n')
+const username = prov_username.getAttribute('data-u_n');
     
 // fetch function for editing bio
 const update_bio = async (event) => {
@@ -25,15 +25,20 @@ const update_bio = async (event) => {
     }
 };
 
-//  fetch function to delete a post
+//  fetch function to update skills
 const edit_skills = async (event) => {
   if (event.target.hasAttribute('data-skill')) {
     const skill = event.target.getAttribute('data-skill');
 
-    console.log(skill)
-    console.log(username)
+    const is_selected = event.target.getAttribute('class');
+
+    // console.log(skill);
+    // console.log(username);
+    // console.log(is_selected);
+    // console.log(is_selected == 'checkbox-container check-button-default')
+
     // if adding a new skill
-    if (skill !== selected){
+    if (is_selected == 'checkbox-container check-button-default'){
       const response = await fetch(`/api/skill/${username}`, {
         method: 'POST',
         body: JSON.stringify({ skill }),
@@ -43,7 +48,7 @@ const edit_skills = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
         alert('Failed to update skill');
       }
@@ -59,9 +64,9 @@ const edit_skills = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
-        alert('Failed to update skill');
+        alert('Failed to delete skill');
       }
     }
   }
