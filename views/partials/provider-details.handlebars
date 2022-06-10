@@ -2,14 +2,14 @@
     <div>
         <div class="bio-header">
             <h4 id="prov-username">{{ username }}</h4>
-            <button class="button quad-btn" id='req-svc-btn'>Request services</button>
+            <button onclick = "req_notification_handler(event)" class="button quad-btn req-svc-vis" id='req-svc-btn'>Request services</button>
         </div>
         <div class="request-container" id= "req-container" style="display: none">
             <h4>Request field</h4>
             <div class="request-content">
                 <textarea type="text" value="request-text" class="bio" autocomplete="off" id="request-text" name="request-text" rows="4rows" cols="50"></textarea>
             </div>
-            <a class="button quad-btn" id="req-notes-btn">Send request</a>
+            <a onclick = "req_notification_handler(event)" class="button quad-btn" id="req-notes-btn">Send request</a>
         </div>
         <div class="bio-content">
             <h4>Bio:</h4>
