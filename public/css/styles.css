@@ -23,6 +23,7 @@
 --yellow-05-1: #FEB300;
 --yellow-05-2: #f8d583;
 --yellow-05-3: #f8cc64;
+--red-05-01: #FF0000;
 }
 
 body {
@@ -475,6 +476,10 @@ label {
 .bio-content {
    padding-right: 15px;
    min-width: 60vw;
+}
+
+.error-txt {
+    color: var(--red-05-01);
 }
 
 .skills-list {
