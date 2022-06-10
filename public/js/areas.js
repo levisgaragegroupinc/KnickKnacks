@@ -2,27 +2,16 @@ const add_area_btn_el = document.querySelector("#add-area");
 const new_zipcode_input_el = document.querySelector("#new_zipcode");
 const provider_username_el = document.querySelector("#prov-username");
 const provider_username = prov_username.getAttribute("data-u_n");
-const zip_form = new_zipcode_input_el.parentElement;
-
-const display_error = (err_msg) => {
-    const alert_p_el = document.createElement("p");
-    alert_p_el.style.color = "red";
-    alert_p_el.textContent = err_msg;
-    zip_form.appendChild(alert_p_el);
-    setTimeout(() => {
-        zip_form.removeChild(alert_p_el);
-    }, 3000);
-}
 
 const add_area = (event) => {
     event.preventDefault();
-    const new_zip = new_zipcode_input_el.value.trim();
+    const new_zip = new_zipcode_input_el.value;
     if (new_zip === "") {
-        display_error("Please enter a zip code");
+        alert("Please enter a zip code");
         return;
     }
     if (new_zip.length !== 5) {
-        display_error("Zip codes must be exactly 5 numbers in length");
+        alert("Zip codes must be 5 digits long");
         return;
     }
 
@@ -45,7 +34,7 @@ const add_area = (event) => {
                 new_zipcode_input_el.classList.remove("success");
             }, 3000);   
         } else {
-            display_error("This area code is already associated with your account");
+            alert("This area code is already associated with your account");
         }
     });
 }
