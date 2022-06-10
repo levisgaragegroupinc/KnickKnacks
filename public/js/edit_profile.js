@@ -1,5 +1,5 @@
 const prov_username = document.querySelector('#prov-username');
-const username = prov_username.getAttribute('data-u_n')
+const username = prov_username.getAttribute('data-u_n');
     
 // fetch function for editing bio
 const update_bio = async (event) => {
@@ -30,12 +30,13 @@ const edit_skills = async (event) => {
   if (event.target.hasAttribute('data-skill')) {
     const skill = event.target.getAttribute('data-skill');
 
-    const is_selected = 
+    const is_selected = event.target.getAttribute('class');
 
-    console.log(skill)
-    console.log(username)
+    console.log(skill);
+    console.log(username);
+    console.log(is_selected);
     // if adding a new skill
-    if (skill !== selected){
+    if (is_selected == true){
       const response = await fetch(`/api/skill/${username}`, {
         method: 'POST',
         body: JSON.stringify({ skill }),
