@@ -398,6 +398,7 @@ select {
     font-size: 16px;
     padding: 6px 6px;
     line-height: 3;
+    width: 140px;
 }
 
 select:focus {
@@ -477,7 +478,16 @@ label {
 
 .request-content {
     padding-right: 15px;
- }
+    margin-bottom: 15px;
+}
+ 
+#req-notes-btn {
+    /* margin-bottom: 40px; */
+}
+
+.request-container {
+    margin-bottom: 15px;
+}
 
 /* BIO */
 .bio-container {
