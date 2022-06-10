@@ -139,7 +139,6 @@ span {
     padding: 4px 12px;
     margin: 4px 10px;
     font-size: 14px;
-    /* opacity: 1; */
 }
 
 .primary-btn {
@@ -492,6 +491,25 @@ label {
     font-size: 14px;
 }
 
+.area-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.area-zip {
+    display: flex;
+    align-items: center;
+}
+
+.add-zip-btn {
+    width: fit-content;
+}
+
+#new_zipcode {
+    width: 50px;
+}
+
 /* PROFILE ITEMS */
 .welcome-container {
     display: flex;
@@ -515,7 +533,7 @@ label {
     color: #333;
     margin: 10px 10px;
     padding: 12px 12px;
-    min-width: 300px;
+    min-width: 60vw;
     background-color: #ffffffdd;
     border-radius: 6px;
 }
