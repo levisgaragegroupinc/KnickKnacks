@@ -12,11 +12,9 @@ router.post ('/sendemail', async (req,res)=> {
       const requestor_data = await User.findByPk(req.session.user_id);
       const provider_data  = await User.findOne({ where: { username: req.body.provider_username }});
 
+
       const requestor = requestor_data.get({ plain: true });
       const provider = provider_data.get({ plain: true });
-
-      console.log ('REquestor ', requestor);
-      console.log ('Provider ', provider);
 
       const emailData = {
         "template": {
@@ -43,7 +41,7 @@ router.post ('/sendemail', async (req,res)=> {
   }
   catch(err) {
     console.log (err);
-    res.json('invalid request');
+    res.json('errored out');
   }
   });
 
