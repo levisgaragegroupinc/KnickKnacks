@@ -252,12 +252,18 @@ span {
     background-color: var(--yellow-05-3);
 }
 
+/* .checkbox-container input:checked ~ .checkmark {
+    background-color: var(--green-05-4);
+    border: solid 2px var(--grey-01);
+} */
+
 .check-button-default {
     background-color: var(--white-05-1);
 }
 
 .check-button-selected {
     background-color: var(--green-05-4);
+    border: solid 2px var(--grey-01);
 }
  
 .checkmark:after {
