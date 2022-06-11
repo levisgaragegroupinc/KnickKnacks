@@ -30,12 +30,13 @@ const edit_skills = async (event) => {
   if (event.target.hasAttribute('data-skill')) {
     const skill = event.target.getAttribute('data-skill');
 
-    const is_selected = event.target.getAttribute('class');
+    const is_selected1 = event.target.children[1];
+    const is_selected = is_selected1.getAttribute('class');
 
-    console.log(skill);
-    console.log(username);
+    // console.log(skill);
+    // console.log(username);
     console.log(is_selected);
-    console.log(is_selected == 'checkbox-container check-button-default')
+    // console.log(is_selected == 'checkbox-container check-button-default')
 
     // if adding a new skill
     if (is_selected == 'checkbox-container check-button-default'){
