@@ -223,7 +223,6 @@ span {
     color: #fff;
 }
 
-
 /* CHECKBOX */
 .checkbox-container {
     white-space: nowrap;
@@ -381,10 +380,6 @@ select {
     line-height: 3;
     width: 140px;
 }
-
-
-
-
 
 select:focus {
     outline: none;
