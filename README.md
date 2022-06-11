@@ -8,7 +8,7 @@
 
 The purpose of this project was to create a jobs board for small business, handyman and private individuals to share their knowledge and unique talents with others in the community. Have job that needs done? Search the by location. Have a need for a specific skill set or professional qualification? Search by skill or service type. Use this application to search for services or to offer your own services for others to peruse.
 
-This application uses the Model Controller View approach to structure and organize the code. The template engine uses Handlebars, Sequelize as the ORM and Express-session for authentication. The database uses MySQL and JAWSDB when hosted on Heroku.
+This application uses the Model Controller View approach to structure and organize the code. The template engine uses Handlebars, Sequelize as the ORM and Express-session for authentication. The database uses MySQL and JAWSDB when hosted on Heroku, and the TrustiFi Expertise email add-on for Heroku.
 
 # Installation
 
