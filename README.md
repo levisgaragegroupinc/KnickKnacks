@@ -34,15 +34,11 @@ Install Handlebars: [Handlerbars](https://www.npmjs.com/package/handlebars).
 
 # Appearance
 
-![Appearance](./public/images/)
+![Appearance](./public/images/knack_01.png)
 
-![Appearance2](./public/images/)
+![Appearance2](./public/images/knack_02.png)
 
-![Appearance2](./public/images/)
-
-![Appearance2](./public/images/)
-
-![Appearance2](./public/images/)
+![Appearance2](./public/images/knack_04.png)
 
 # Usage
 
