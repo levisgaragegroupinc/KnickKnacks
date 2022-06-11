@@ -80,11 +80,16 @@ router.get("/profile/edit", withAuth, async (req, res) => {
 
     const plain_skills = skills_data.map(skill => skill.get({ plain: true }));
 
+    // extract skill_name only from user object
+    const user_skills = user.providers_skills.map(a => a.skill_name);
+
     const skills = plain_skills.map(skill => {
-        skill.has_skill = user.providers_skills.includes(skill);
+        skill.has_skill = user_skills.includes(skill.skill_name);
         return skill;
     });
-
+    
+    // console.log("***line 91, skills info: ")
+    // console.log(skills)
     res.render("home-profile", {
         user,
         logged_in: req.session.logged_in,
