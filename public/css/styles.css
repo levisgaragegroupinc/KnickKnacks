@@ -139,6 +139,7 @@ span {
     padding: 4px 12px;
     margin: 4px 10px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .primary-btn {
@@ -189,6 +190,7 @@ span {
 #home-button {
     font-family: 'Press Start 2P', cursive;
     margin-left: 20%;
+    cursor: pointer;
 }
     
 .btn-group {
@@ -244,6 +246,7 @@ span {
     width: 100%;
     background-color: var(--white-05-1);
     z-index: -1;
+    cursor: pointer;
 }
 
 .checkbox-container:hover input ~ .checkmark {
@@ -284,6 +287,7 @@ span {
 .search-icon-btn {
     border-radius: 50px;
     padding: 4px 6px;
+    cursor: pointer;
 }
 
 .search-icon-btn:hover {
@@ -508,6 +512,10 @@ label {
 
 #new_zipcode {
     width: 50px;
+}
+
+.success {
+    background-color: var(--green-05-1);
 }
 
 /* PROFILE ITEMS */
