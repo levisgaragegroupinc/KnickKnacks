@@ -168,6 +168,16 @@ span {
     background-color: rgb(228, 228, 228);
 }
 
+.cancel-btn {
+    background-color: var(--grey-05-3);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cancel-btn:hover {
+    background-color: var(--pink-05-3);
+}
+
 .quad-btn {
     background-color: var(--green-05-1);
     color: #fff;
@@ -208,6 +218,11 @@ span {
     display: flex;
     align-items: center;
 }
+
+#req-cancel-btn {
+    color: #fff;
+}
+
 
 /* CHECKBOX */
 .checkbox-container {
@@ -353,6 +368,11 @@ input:focus {
 
 /* DROP DOWNS */
 select {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none; */
+    height: 30px;
+
     outline: none;
     border: none;
     cursor: pointer;
@@ -364,6 +384,10 @@ select {
     line-height: 3;
     width: 140px;
 }
+
+
+
+
 
 select:focus {
     outline: none;
@@ -514,6 +538,7 @@ label {
     width: 50px;
 }
 
+/* styles the background on successfully adding a zip code. */
 .success {
     background-color: var(--green-05-1);
 }
