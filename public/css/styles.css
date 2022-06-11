@@ -514,6 +514,7 @@ label {
     width: 50px;
 }
 
+/* styles the background on successfully adding a zip code. */
 .success {
     background-color: var(--green-05-1);
 }
