@@ -32,6 +32,8 @@ Install bycrypt: [bycrypt](https://www.npmjs.com/package/bcrypt).
 
 Install Handlebars: [Handlerbars](https://www.npmjs.com/package/handlebars).
 
+Install Heroku Trustifi Add-on: [Trustifi](https://elements.heroku.com/addons/trustifi).
+
 # Appearance
 
 ![Appearance](./public/images/knack_01.png)
