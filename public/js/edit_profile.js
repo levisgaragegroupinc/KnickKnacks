@@ -32,14 +32,9 @@ const edit_skills = async (event) => {
 
     const is_selected1 = event.target.children[1];
     const is_selected = is_selected1.getAttribute('class');
-
-    // console.log(skill);
-    // console.log(username);
-    console.log(is_selected);
-    // console.log(is_selected == 'checkbox-container check-button-default')
-
+    
     // if adding a new skill
-    if (is_selected == 'checkbox-container check-button-default'){
+    if (is_selected == 'checkmark check-button-default'){
       const response = await fetch(`/api/skill/${username}`, {
         method: 'POST',
         body: JSON.stringify({ skill }),
