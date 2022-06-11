@@ -139,7 +139,7 @@ span {
     padding: 4px 12px;
     margin: 4px 10px;
     font-size: 14px;
-    /* opacity: 1; */
+    cursor: pointer;
 }
 
 .primary-btn {
@@ -168,6 +168,16 @@ span {
     background-color: rgb(228, 228, 228);
 }
 
+.cancel-btn {
+    background-color: var(--grey-05-3);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.cancel-btn:hover {
+    background-color: var(--pink-05-3);
+}
+
 .quad-btn {
     background-color: var(--green-05-1);
     color: #fff;
@@ -190,6 +200,7 @@ span {
 #home-button {
     font-family: 'Press Start 2P', cursive;
     margin-left: 20%;
+    cursor: pointer;
 }
     
 .btn-group {
@@ -206,6 +217,10 @@ span {
 .edit-skills-btn-group {
     display: flex;
     align-items: center;
+}
+
+#req-cancel-btn {
+    color: #fff;
 }
 
 /* CHECKBOX */
@@ -245,6 +260,7 @@ span {
     width: 100%;
     background-color: var(--white-05-1);
     z-index: -1;
+    cursor: pointer;
 }
 
 .checkbox-container:hover input ~ .checkmark {
@@ -285,6 +301,7 @@ span {
 .search-icon-btn {
     border-radius: 50px;
     padding: 4px 6px;
+    cursor: pointer;
 }
 
 .search-icon-btn:hover {
@@ -352,8 +369,10 @@ input:focus {
 select {
     outline: none;
     border: none;
+    border-radius: 50px;
     cursor: pointer;
     background-color: #fff;
+    background-color: var(--wood-05-1);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     font-size: 16px;
@@ -492,6 +511,30 @@ label {
     font-size: 14px;
 }
 
+.area-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.area-zip {
+    display: flex;
+    align-items: center;
+}
+
+.add-zip-btn {
+    width: fit-content;
+}
+
+#new_zipcode {
+    width: 50px;
+}
+
+/* styles the background on successfully adding a zip code. */
+.success {
+    background-color: var(--green-05-1);
+}
+
 /* PROFILE ITEMS */
 .welcome-container {
     display: flex;
@@ -515,7 +558,7 @@ label {
     color: #333;
     margin: 10px 10px;
     padding: 12px 12px;
-    min-width: 300px;
+    min-width: 60vw;
     background-color: #ffffffdd;
     border-radius: 6px;
 }

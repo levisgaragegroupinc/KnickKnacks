@@ -5,6 +5,13 @@ router.post("/:username", async (req, res) => {
     try {
         const user = await User.findOne({ where: { username: req.params.username }});
         const existing_area = await ServiceArea.findOne({ where: { zipcode: req.body.zipcode }});
+        if (!user) {
+            res.status(404).json({ message: "There is no user with this username"});
+            return;
+        }
+        if (!req.body.zipcode) {
+            res.status(400).json({ message: "Request body must contain a zipcode property"});
+        }
         let new_area;
         if (!existing_area) {
             new_area = await ServiceArea.create({ zipcode: req.body.zipcode });

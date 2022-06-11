@@ -21,7 +21,7 @@
         <div class="profile-container-white">
             <div>
                 <div class="bio-header">
-                    <h4>Skills</h4>
+                    <h4>Knacks</h4>
                 </div>
             </div>
             <form class="edit-skills-form">
@@ -38,10 +38,15 @@
                     <h4>Service Area</h4>
                 </div>
             </div>
-            <form class="edit-skills-form">
-                <input id="new_zipcode" type="text">
-                <button onclick="add_area(event)">Add Service Area!</button>
-            </form>
+            <div class="area-container">
+                <form class="edit-skills-form area-zip">
+                    <div class="input-center">
+                        <label for="zip-code">Zip Code</label>
+                        <input id="new_zipcode" name="zip-code" type="text">
+                    </div>
+                    <button class="button add-zip-btn quad-btn" onclick="add_area(event)">Add Service Area!</button>
+                </form>
+            </div> 
         </div>
     </div> 
 </div>      

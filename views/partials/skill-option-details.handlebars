@@ -1,10 +1,10 @@
-<label for="{{skill_option}}" 
-    {{#if has_skill}}
-    class="checkbox-container check-button-selected"
-    {{else}}
-    class="checkbox-container check-button-default" 
-    {{/if}} 
-    data-skill="{{skill_name}}">{{ skill_name }}
+<label for="{{skill_option}}" class="checkbox-container" data-skill="{{skill_name}}">{{ skill_name }}
     <input type="checkbox" id="{{skill_option}}" name="{{skill_option}}" value="{{skill_option}}">
-    <checkbox class="checkmark"></checkbox>
+    <checkbox
+       {{#if has_skill}}
+    class="checkmark check-button-selected"
+    {{else}}
+    class="checkmark check-button-default" 
+    {{/if}}    
+    ></checkbox>
 </label>
