@@ -48,7 +48,7 @@ Use this application to search for services near you, or create a bio to offer y
 
 # Live page hosted on heroku
 
-Link to live page: [Live page]().
+Link to live page: [Live page](https://knickknacks-ondemand.herokuapp.com/).
 
 ## Credits
 
